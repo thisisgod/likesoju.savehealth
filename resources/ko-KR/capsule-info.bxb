@@ -1,0 +1,15 @@
+capsule-info {
+  display-name (FoodFinder)
+  developer-name (TeamDongA)
+  icon-asset (images/test123.png)
+  description ("건강과 먹는것에 관한 캡슐입니다")
+  website-url (https://github.com/thisisgod/Bixby_Project)
+  terms-url (https://github.com/thisisgod/Bixby_Project)
+  dispatch-name (건강챙겨)//사용자가 부르는 캡슐의 이름
+  dispatch-aliases {
+    alias (FoodFinder)//사용자가 부르는 캡슐의 별칭
+  }
+  search-keywords{
+    keyword (건강챙겨)//마켓플레이스에서의 검색 키워드
+  }
+}

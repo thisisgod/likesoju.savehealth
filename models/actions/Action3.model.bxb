@@ -1,0 +1,27 @@
+action (Action3) {
+  description (FoodName이 BodyName에 좋아?)
+  type (Search)
+  collect {
+    input (foodName) {
+      type (FoodName)
+      min (Required) max (One)
+    }
+    input (bodyName){
+      type (BodyName)
+      min (Required) max (One)
+    }
+  }
+  output (ReturnAction3){
+    throws{
+      unknown-error{
+        on-catch {
+          halt {
+            dialog {
+              template ("문제가 생겼네요. 다시 한번 말씀해주세요.")
+            }
+          }
+        }
+      }
+    }
+  }
+}

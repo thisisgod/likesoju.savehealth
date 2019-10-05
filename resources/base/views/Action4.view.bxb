@@ -1,0 +1,41 @@
+result-view{
+  match : ReturnAction4(this){
+    min (Required) max (Many)
+  }
+
+  message{//맨위
+    template ("#{value(this.foodName)}에 대한 결과값입니다. ")
+  }
+
+  render{//중앙
+    list-of (this){
+      where-each (this){
+        title-card{
+          title-area{
+            halign (Start)
+            slot1{
+              text{
+                value{
+                  template ("#{value(this.id)}. #{value(this.bodyName)}")
+                }
+              }
+            }
+            slot2{
+              paragraph{
+                value{
+                  template("#{value(this.foodDiscription)}")
+                }
+              }  
+            }
+          }
+        }
+      }
+    }
+  }
+
+  conversation-drivers{//맨아래
+    conversation-driver{
+      template ("다음 결과 #{value(this.index)}번째 부터 보여줘")
+    }
+  }
+}

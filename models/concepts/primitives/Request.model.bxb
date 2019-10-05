@@ -1,0 +1,5 @@
+enum (Request) {
+  description (요구하는 것이 음식인지 영양제인지 판단하는 컨셉)
+  symbol (FoodName)
+  symbol (HealthFunctionalFoodName)
+}

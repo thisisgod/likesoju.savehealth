@@ -1,0 +1,20 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (Action1) {
+      accepted-inputs (bodyName, request)
+      local-endpoint (Action1.js)
+    }
+    action-endpoint (Action2) {
+      accepted-inputs (bodyName, request)
+      local-endpoint (Action2.js)
+    }
+    action-endpoint (Action3) {
+      accepted-inputs (foodName, bodyName)
+      local-endpoint (Action3.js)
+    }
+    action-endpoint (Action4) {
+      accepted-inputs (foodName, startIdx)
+      local-endpoint (Action4.js)
+    }
+  }
+}

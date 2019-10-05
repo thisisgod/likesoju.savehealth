@@ -1,0 +1,10 @@
+train (t-4jxisya1o8mgg6zp2bn534lt2) {
+  utterance ("[g:ReturnAction2] (눈)[v:BodyName]에 좋은 (건강기능식품)[v:Request:HealthFunctionalFoodName] 알려줘")
+  plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNiEEOThYmLo4k75adU+iXmpmJoCEotLE0tLmFgZmBkYAKSDEAaBCEAxAeLAgA=)
+  last-modified (1570277298164)
+}
+train (t-4lux9jlza8eo7j24bwifca1wc) {
+  utterance ("[g:ReturnAction4] (블루베리)[v:FoodName]가 어디에 좋아?")
+  plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpjKIoEl45qWkVjAwMzAyMAFJBiANghDABMEA)
+  last-modified (1570298488066)
+}

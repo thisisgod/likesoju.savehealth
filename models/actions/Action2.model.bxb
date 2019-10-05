@@ -1,0 +1,27 @@
+action (Action2) {
+  description (BodyName에 좋은 HealthFunctionalFoodName을 알려줘)
+  type(Search)
+  collect {
+    input (bodyName) {
+      type (BodyName)
+      min (Required) max (One)
+    }
+    input(request){
+      type(Request)
+      min (Required) max (One)
+    }
+  }
+  output (ReturnAction2){
+    throws{
+      unknown-error{
+        on-catch {
+          halt {
+            dialog {
+              template ("문제가 생겼네요. 다시 한번 말씀해주세요.")
+            }
+          }
+        }
+      }
+    }
+  }
+}

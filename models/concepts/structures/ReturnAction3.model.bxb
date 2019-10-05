@@ -1,0 +1,7 @@
+structure (ReturnAction3) {
+  description (FoodName이 BodyName에 좋아?에 대한 리턴값)
+  property (answer) {
+    type (AnswerAction3)
+    min (Required) max (One)
+  }
+}

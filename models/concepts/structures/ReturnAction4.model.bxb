@@ -1,0 +1,23 @@
+structure (ReturnAction4) {
+  description (FoodName이 어디에 좋아? 의 리턴값)
+  property(id){
+    type(Id)
+    min (Required) max (Many)
+  }
+  property (bodyName) {
+    type (BodyName)
+    min (Required) max (Many)
+  }
+  property(foodDiscription){
+    type(FoodDescription)
+    min (Required) max (Many)
+  }
+  property (foodName){
+    type(FoodName)
+    min (Required) max (Many)
+  }
+  property (index){
+    type(Index)
+    min (Required) max (One)
+  }
+}

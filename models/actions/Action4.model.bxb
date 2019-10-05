@@ -1,0 +1,39 @@
+action (Action4) {
+  description (FoodName이 어디에 좋아?)
+  type (Search)
+  collect {
+    input (foodName) {
+      type (FoodName)
+      min (Required) max (One)
+    }
+    input (startIdx){
+      type(Index)
+      min (Required) max (One)
+      default-init{
+        intent{
+          goal: Index(1)
+        }
+      }
+    }
+  }
+  output (ReturnAction4){
+    throws{
+      unknown-error{
+        on-catch {
+          halt {
+            dialog {
+              template ("문제가 생겼네요. 다시 한번 말씀해주세요.")
+            }
+          }
+        }
+      }
+    }
+    on-empty{
+      halt{
+        dialog{
+          template ("더이상 결과값이 없어요.")
+        }
+      }
+    }
+  }
+}

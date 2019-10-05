@@ -1,0 +1,12 @@
+vocab(Request){
+  "FoodName"{
+    "음식"
+    "재료"
+    "식자재"
+    "먹을거"
+  }
+  "HealthFunctionalFoodName"{
+    "건강기능식품"
+    "영양제"
+  }
+}
