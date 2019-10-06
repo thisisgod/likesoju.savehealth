@@ -1,6 +1,11 @@
 module.exports.function = function action4 (foodName, startIdx) {
   const console = require('console');
-  const fakeData = require('./data/Action4Data.js');
+  const http = require('http');
+  let options = {
+    format: 'json'
+  };
+  let response = http.getUrl('http://0e8d5059.ngrok.io/food', options);
+  let fakeData = response;
   let returnId = new Array();
   let index = startIdx - 1;
   let returnAction4 = new Array();
