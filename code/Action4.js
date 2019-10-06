@@ -2,9 +2,12 @@ module.exports.function = function action4 (foodName, startIdx) {
   const console = require('console');
   const http = require('http');
   let options = {
-    format: 'json'
+    format: 'json',
+    query: {
+      foodName: foodName
+    }
   };
-  let response = http.getUrl('http://0e8d5059.ngrok.io/food', options);
+  let response = http.getUrl('http://151b5c2d.ngrok.io/food', options);
   let fakeData = response;
   let returnId = new Array();
   let index = startIdx - 1;
