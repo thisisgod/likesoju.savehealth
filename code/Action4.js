@@ -8,26 +8,17 @@ module.exports.function = function action4 (foodName, startIdx) {
     }
   };
   let response = http.getUrl('http://151b5c2d.ngrok.io/food', options);
-  let fakeData = response;
-  let returnId = new Array();
-  let index = startIdx - 1;
+  let data = response;
   let returnAction4 = new Array();
-  console.log(index);
-  let i, j;
-  for(i = 0, j = 0; i < fakeData.length; i++){
-    if(fakeData[i].foodName==String(foodName)){
-      if(index>0){
-        index--;
-        console.log("Check" + index);
-        console.log(fakeData[i].bodyName);
-        continue;
-      }
-      returnAction4[j] = fakeData[i];
-      returnAction4[j].id=j + startIdx;
-      j++;
-      if(j==3)break;
-    }
+  let returnObj = new Object();
+  let i
+  for(i = 0; i<data.length; i++){
+    returnObj.id = data[i].id;
+    returnObj.bodyName = data[i].bodyName;
+    returnObj.foodDiscription = data[i].foodDiscription;
+    returnObj.foodName = data[i].foodName;
+    returnObj.index = startIdx+i;
+    returnAction4.push(returnObj);
   }
-  for(i=0;i<j;i++)returnAction4[i].index=startIdx+j;
   return returnAction4;
 }
