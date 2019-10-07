@@ -7,7 +7,7 @@ module.exports.function = function action4 (foodName, startIdx) {
       foodName: foodName
     }
   };
-  let response = http.getUrl('http://026fc0b5.ngrok.io/food', options);
+  let response = http.getUrl('https://3eaee7f7.ngrok.io/food', options);
   let data = response;
   let returnId = new Array();
   let index = startIdx - 1;
@@ -21,17 +21,23 @@ module.exports.function = function action4 (foodName, startIdx) {
         console.log("Check" + index);
         continue;
       }
+      // 데이터 값을 받아와서 Obj안에 넣은 후 리턴배열에 푸쉬
       returnObj.id = j + startIdx;
       returnObj.bodyName = data[i].bodyName;
       returnObj.foodDiscription = data[i].foodDiscription;
       returnObj.foodName = data[i].foodName;
-      console.log(returnObj);
-      // returnObj.mainImage = data[i].mainImage;
-      // returnObj.recipeUrlOne = data[i].recipeUrlOne;
-      // returnObj.recipeUrlTwo = data[i].recipeUrlTwo;
-      // returnObj.recipeUrlThree = data[i].recipeUrlThree;
+      returnObj.recipeUrlOne = data[i].recipeUrlOne;
+      returnObj.recipeUrlTwo = data[i].recipeUrlTwo;
+      returnObj.recipeUrlThree = data[i].recipeUrlThree;
+      returnObj.mainImage = data[i].mainImage;
+      returnObj.recipeNameOne = data[i].recipeNameOne;
+      returnObj.recipeNameTwo = data[i].recipeNameTwo;
+      returnObj.recipeNameThree = data[i].recipeNameThree;
+      returnObj.recipeImageOne = data[i].recipeImageOne;
+      returnObj.recipeImageTwo = data[i].recipeImageTwo;
+      returnObj.recipeImageThree = data[i].recipeImageThree;
+
       returnAction4.push(returnObj);
-      console.log(returnAction4[i]);
       j++;
       if(j==3)break;
   }
