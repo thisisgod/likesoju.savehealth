@@ -12,16 +12,16 @@ module.exports.function = function action4 (foodName, startIdx) {
   let returnId = new Array();
   let index = startIdx - 1;
   let returnAction4 = new Array();
-  let returnObj = new Object();
-  console.log(index);
-  let i, j;
-  for(i = 0, j = 0; i < data.length; i++){
+
+  let i, j = 0;
+  for(i = 0; i < data.length; i++){
       if(index>0){
         index--;
         console.log("Check" + index);
         continue;
       }
       // 데이터 값을 받아와서 Obj안에 넣은 후 리턴배열에 푸쉬
+      let returnObj = new Object();
       returnObj.id = j + startIdx;
       returnObj.bodyName = data[i].bodyName;
       returnObj.foodDiscription = data[i].foodDiscription;
@@ -29,15 +29,17 @@ module.exports.function = function action4 (foodName, startIdx) {
       returnObj.recipeUrlOne = data[i].recipeUrlOne;
       returnObj.recipeUrlTwo = data[i].recipeUrlTwo;
       returnObj.recipeUrlThree = data[i].recipeUrlThree;
-      returnObj.mainImage = data[i].mainImage;
+      // returnObj.mainImage = data[i].mainImage;
       returnObj.recipeNameOne = data[i].recipeNameOne;
       returnObj.recipeNameTwo = data[i].recipeNameTwo;
       returnObj.recipeNameThree = data[i].recipeNameThree;
-      returnObj.recipeImageOne = data[i].recipeImageOne;
-      returnObj.recipeImageTwo = data[i].recipeImageTwo;
-      returnObj.recipeImageThree = data[i].recipeImageThree;
+      // returnObj.recipeImageOne = data[i].recipeImageOne;
+      // returnObj.recipeImageTwo = data[i].recipeImageTwo;
+      // returnObj.recipeImageThree = data[i].recipeImageThree;
 
       returnAction4.push(returnObj);
+      delete returnObj;
+      console.log(returnAction4);
       j++;
       if(j==3)break;
   }
