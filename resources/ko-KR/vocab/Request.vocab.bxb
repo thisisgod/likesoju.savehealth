@@ -4,6 +4,7 @@ vocab(Request){
     "재료"
     "식자재"
     "먹을거"
+    "거"
   }
   "HealthFunctionalFoodName"{
     "건강기능식품"
