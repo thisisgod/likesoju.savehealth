@@ -20,4 +20,28 @@ structure (ReturnAction4) {
     type(Index)
     min (Required) max (One)
   }
+  property (recipeNameOne){
+    type(RecipeNameOne)
+    min (Optional) max (Many)
+  }
+  property (recipeNameTwo){
+    type(RecipeNameTwo)
+    min (Optional) max (Many)
+  }
+  property (recipeNameThree){
+    type(RecipeNameThree)
+    min (Optional) max (Many)
+  }
+  property (recipeURLOne){
+    type(RecipeURLOne)
+    min (Optional) max (Many)
+  }
+  property (recipeURLTwo){
+    type(RecipeURLTwo)
+    min (Optional) max (Many)
+  }
+  property (recipeURLThree){
+    type(RecipeURLThree)
+    min (Optional) max (Many)
+  }
 }
