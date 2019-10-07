@@ -8,29 +8,55 @@ result-view{
   }
 
   render{//중앙
+    
     list-of (this){
       where-each (this){
-        title-card{
-          title-area{
+        image-card {
+          aspect-ratio (4:3)
+          title-area {
             halign (Start)
-            slot1{
-              text{
-                value{
-                  template ("#{value(this.index)}. #{value(this.bodyName)}")
+            slot1 {
+              text {
+                value ("#{value(this.bodyName)}") // Best Eastern Hotels and Resorts
+                style (Title_M)
+              }
+            }
+            slot2 {
+              single-line {
+                text {
+                  value ("#{value(this.foodDiscription)}") // From $160.00 • 4.5 stars
+                  style (Detail_L)
                 }
               }
             }
-            slot2{
-              paragraph{
-                value{
-                  template("#{value(this.foodDiscription)}")
-                }
-              }  
-            }
           }
+          image-url ("./././images/test123.png")
         }
       }
     }
+    // list-of (this){
+    //   where-each (this){
+    //     title-card{
+    //       title-area{
+    //         halign (Start)
+    //         slot1{
+    //           text{
+    //             value{
+    //               template ("#{value(this.id)}. #{value(this.bodyName)}")
+    //             }
+    //           }
+    //         }
+    //         slot2{
+    //           paragraph{
+    //             value{
+    //               template("#{value(this.foodDiscription)}")
+    //             }
+    //           }  
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   conversation-drivers{//맨아래
