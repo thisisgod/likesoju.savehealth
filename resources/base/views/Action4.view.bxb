@@ -1,37 +1,27 @@
 result-view{
   match : ReturnAction4(this){
-    min (Required) max (Many)
+    from-output:Action4
   }
 
   message{//맨위
-    template ("#{value(this.foodName)}에 대한 결과값입니다. ")
+    template ("#{value(this.foodName)}이(가) 효과적인 부위입니다. ")
   }
 
   render{//중앙
-    
-    list-of (this){
-      where-each (this){
-        image-card {
-          aspect-ratio (4:3)
-          title-area {
-            halign (Start)
-            slot1 {
-              text {
-                value ("#{value(this.bodyName)}") // Best Eastern Hotels and Resorts
-                style (Title_M)
-              }
-            }
-            slot2 {
-              single-line {
-                text {
-                  value ("#{value(this.foodDiscription)}") // From $160.00 • 4.5 stars
-                  style (Detail_L)
-                }
-              }
+    if (size(this) > 1) {
+      list-of (this) {
+        has-details (true)
+        where-each (item) {
+          layout-macro (action4-card) {
+            param (returnAction4) {
+              expression (item)
             }
           }
-          image-url ("./././images/test123.png")
         }
+      }
+    } else-if (size(this) == 1) {
+      layout-match (this) {
+        mode (Details)
       }
     }
     // list-of (this){

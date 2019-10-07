@@ -1,0 +1,3 @@
+text (MainImage) {
+  description (FoodName의 Image를 저장할 Concept)
+}

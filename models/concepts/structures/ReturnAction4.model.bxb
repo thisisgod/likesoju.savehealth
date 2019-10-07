@@ -22,26 +22,42 @@ structure (ReturnAction4) {
   }
   property (recipeNameOne){
     type(RecipeNameOne)
-    min (Optional) max (Many)
+    min (Optional) max (One)
   }
   property (recipeNameTwo){
     type(RecipeNameTwo)
-    min (Optional) max (Many)
+    min (Optional) max (One)
   }
   property (recipeNameThree){
     type(RecipeNameThree)
-    min (Optional) max (Many)
+    min (Optional) max (One)
   }
   property (recipeURLOne){
     type(RecipeURLOne)
-    min (Optional) max (Many)
+    min (Optional) max (One)
   }
   property (recipeURLTwo){
     type(RecipeURLTwo)
-    min (Optional) max (Many)
+    min (Optional) max (One)
   }
   property (recipeURLThree){
     type(RecipeURLThree)
-    min (Optional) max (Many)
+    min (Optional) max (One)
+  }
+  property (mainImage){
+    type (MainImage)
+    min (Required) max (One)
+  }
+  property (recipeImageOne){
+    type(RecipeImageOne)
+    min (Optional) max (One)
+  }
+  property (recipeImageTwo){
+    type(RecipeImageTwo)
+    min (Optional) max (One)
+  }
+  property (recipeImageThree){
+    type(RecipeImageThree)
+    min (Optional) max (One)
   }
 }
