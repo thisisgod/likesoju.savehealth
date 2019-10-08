@@ -20,20 +20,12 @@ structure (ReturnAction4) {
     type(Index)
     min (Required) max (One)
   }
-  property(recipeName){
-    type(RecipeNameOne)
-    min (Optional) max (Many)
-  }
-  property(recipeURL){
-    type(RecipeURLOne)
-    min (Optional) max (Many)
-  }
-  property (recipeImage){
-    type(RecipeImageOne)
-    min (Optional) max (Many)
-  }
   property (mainImage){
     type (MainImage)
     min (Required) max (One)
+  }
+  property(recipe){
+    type(Recipe)
+    min (Optional) max (Many)
   }
 }

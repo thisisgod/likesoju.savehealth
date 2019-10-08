@@ -1,19 +1,31 @@
 structure (ReturnAction1) {
   description (BodyName에 좋은 FoodName 알려줘에 대한 리턴값)
+  property(id){
+    type(Id)
+    min (Required) max (One)
+  }
   property (bodyName) {
     type (BodyName)
-    min (Required) max (Many)
+    min (Required) max (One)
   }
-  property (foodName) {
-    type (FoodName)
-    min (Required) max (Many)
+  property(foodDiscription){
+    type(FoodDescription)
+    min (Required) max (One)
   }
-  property (image){
-    type(Image)
-    min (Required) max (Many)
+  property (foodName){
+    type(FoodName)
+    min (Required) max (One)
   }
-  property(url){
-    type(URL)
-    min (Required) max (Many)
+  property (index){
+    type(Index)
+    min (Required) max (One)
+  }
+  property (mainImage){
+    type (MainImage)
+    min (Required) max (One)
+  }
+  property(recipe){
+    type(Recipe)
+    min (Optional) max (Many)
   }
 }

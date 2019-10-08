@@ -2,14 +2,14 @@ structure (Recipe) {
   description (레시피 정보를 저장할 구조체)
   property (recipeName) {
     type (RecipeName)
-    min (Required) max (One)
+    min (Required) max (Many)
   }
   property (recipeURL){
     type (RecipeURL)
-    min (Required) max (One)
+    min (Required) max (Many)
   }
   property (recipeImage){
     type(RecipeImage)
-    min (Required) max (One)
+    min (Required) max (Many)
   }
 }
