@@ -1,7 +1,31 @@
 structure (ReturnAction3) {
   description (FoodName이 BodyName에 좋아?에 대한 리턴값)
+  property(foodName){
+    type (FoodName)
+    min (Required) max (One)
+  }
+  property(bodyName){
+    type (BodyName)
+    min (Required) max (One)
+  }
   property (answer) {
     type (AnswerAction3)
     min (Required) max (One)
+  }
+  property (isFind){
+    type (IsFind)
+    min (Required) max (One)
+  }
+  property(recipe){
+    type(Recipe)
+    min (Optional) max (Many)
+  }
+  property(returnAction1){
+    type(ReturnAction1)
+    min (Optional) max (Many)
+  }
+  property(returnAction4){
+    type (ReturnAction4)
+    min (Optional) max (Many)
   }
 }

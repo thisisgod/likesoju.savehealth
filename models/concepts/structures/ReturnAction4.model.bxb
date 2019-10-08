@@ -2,19 +2,19 @@ structure (ReturnAction4) {
   description (FoodName이 어디에 좋아? 의 리턴값)
   property(id){
     type(Id)
-    min (Required) max (Many)
+    min (Required) max (One)
   }
   property (bodyName) {
     type (BodyName)
-    min (Required) max (Many)
+    min (Required) max (One)
   }
   property(foodDiscription){
     type(FoodDescription)
-    min (Required) max (Many)
+    min (Required) max (One)
   }
   property (foodName){
     type(FoodName)
-    min (Required) max (Many)
+    min (Required) max (One)
   }
   property (index){
     type(Index)
@@ -32,44 +32,8 @@ structure (ReturnAction4) {
     type(RecipeImageOne)
     min (Optional) max (Many)
   }
-  // property (recipeNameOne){
-  //   type(RecipeNameOne)
-  //   min (Optional) max (One)
-  // }
-  // property (recipeNameTwo){
-  //   type(RecipeNameTwo)
-  //   min (Optional) max (One)
-  // }
-  // property (recipeNameThree){
-  //   type(RecipeNameThree)
-  //   min (Optional) max (One)
-  // }
-  // property (recipeURLOne){
-  //   type(RecipeURLOne)
-  //   min (Optional) max (One)
-  // }
-  // property (recipeURLTwo){
-  //   type(RecipeURLTwo)
-  //   min (Optional) max (One)
-  // }
-  // property (recipeURLThree){
-  //   type(RecipeURLThree)
-  //   min (Optional) max (One)
-  // }
   property (mainImage){
     type (MainImage)
     min (Required) max (One)
   }
-  // property (recipeImageOne){
-  //   type(RecipeImageOne)
-  //   min (Optional) max (One)
-  // }
-  // property (recipeImageTwo){
-  //   type(RecipeImageTwo)
-  //   min (Optional) max (One)
-  // }
-  // property (recipeImageThree){
-  //   type(RecipeImageThree)
-  //   min (Optional) max (One)
-  // }
 }
