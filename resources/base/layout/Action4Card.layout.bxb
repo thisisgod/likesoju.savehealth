@@ -8,7 +8,7 @@ layout-macro-def (action4-card) {
   content {
     thumbnail-card {
       image-position (End)
-      image-url ("./images/test123.png")
+      image-url ("./images/#{value(returnAction4.mainImage)}.png")
       title-area {
         halign (Start)
         slot1 {

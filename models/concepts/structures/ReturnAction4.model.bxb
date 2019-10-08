@@ -20,44 +20,56 @@ structure (ReturnAction4) {
     type(Index)
     min (Required) max (One)
   }
-  property (recipeNameOne){
+  property(recipeName){
     type(RecipeNameOne)
-    min (Optional) max (One)
+    min (Optional) max (Many)
   }
-  property (recipeNameTwo){
-    type(RecipeNameTwo)
-    min (Optional) max (One)
-  }
-  property (recipeNameThree){
-    type(RecipeNameThree)
-    min (Optional) max (One)
-  }
-  property (recipeURLOne){
+  property(recipeURL){
     type(RecipeURLOne)
-    min (Optional) max (One)
+    min (Optional) max (Many)
   }
-  property (recipeURLTwo){
-    type(RecipeURLTwo)
-    min (Optional) max (One)
+  property (recipeImage){
+    type(RecipeImageOne)
+    min (Optional) max (Many)
   }
-  property (recipeURLThree){
-    type(RecipeURLThree)
-    min (Optional) max (One)
-  }
+  // property (recipeNameOne){
+  //   type(RecipeNameOne)
+  //   min (Optional) max (One)
+  // }
+  // property (recipeNameTwo){
+  //   type(RecipeNameTwo)
+  //   min (Optional) max (One)
+  // }
+  // property (recipeNameThree){
+  //   type(RecipeNameThree)
+  //   min (Optional) max (One)
+  // }
+  // property (recipeURLOne){
+  //   type(RecipeURLOne)
+  //   min (Optional) max (One)
+  // }
+  // property (recipeURLTwo){
+  //   type(RecipeURLTwo)
+  //   min (Optional) max (One)
+  // }
+  // property (recipeURLThree){
+  //   type(RecipeURLThree)
+  //   min (Optional) max (One)
+  // }
   property (mainImage){
     type (MainImage)
     min (Required) max (One)
   }
-  property (recipeImageOne){
-    type(RecipeImageOne)
-    min (Optional) max (One)
-  }
-  property (recipeImageTwo){
-    type(RecipeImageTwo)
-    min (Optional) max (One)
-  }
-  property (recipeImageThree){
-    type(RecipeImageThree)
-    min (Optional) max (One)
-  }
+  // property (recipeImageOne){
+  //   type(RecipeImageOne)
+  //   min (Optional) max (One)
+  // }
+  // property (recipeImageTwo){
+  //   type(RecipeImageTwo)
+  //   min (Optional) max (One)
+  // }
+  // property (recipeImageThree){
+  //   type(RecipeImageThree)
+  //   min (Optional) max (One)
+  // }
 }
