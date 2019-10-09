@@ -12,7 +12,7 @@ result-view{
       list-of (this) {
         has-details (true)
         where-each (item) {
-          layout-macro (action4-card) {
+          layout-macro (action4-summary) {
             param (returnAction4) {
               expression (item)
             }
@@ -20,33 +20,15 @@ result-view{
         }
       }
     } else-if (size(this) == 1) {
-      layout-match (this) {
-        mode (Details)
+      //layout-match (this) {
+      //  mode (Details)
+      //}
+      layout-macro (action4-detail){
+        param (returnAction4){
+          expression (this)
+        }
       }
     }
-    // list-of (this){
-    //   where-each (this){
-    //     title-card{
-    //       title-area{
-    //         halign (Start)
-    //         slot1{
-    //           text{
-    //             value{
-    //               template ("#{value(this.id)}. #{value(this.bodyName)}")
-    //             }
-    //           }
-    //         }
-    //         slot2{
-    //           paragraph{
-    //             value{
-    //               template("#{value(this.foodDiscription)}")
-    //             }
-    //           }  
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
   }
 
   conversation-drivers{//맨아래
