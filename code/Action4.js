@@ -1,28 +1,29 @@
 module.exports.function = function action4(foodName, startIdx) {
   const console = require('console');
+  const config = require('config');
   const http = require('http');
-  const fakeData = require('./data/fakeData.js');
-  // let options = {
-  //   format: 'json',
-  //   query: {
-  //     foodName: foodName
-  //   }
-  // };
-  // let response = http.getUrl('https://3eaee7f7.ngrok.io/food', options);
-  // let data = response;
-  let data = fakeData;
+  // const fakeData = require('./data/fakeData.js');
+  let options = {
+    format: 'json',
+    query: {
+      foodName: foodName
+    }
+  };
+  let response = http.getUrl(config.get('remote.url') + '/food', options);
+  let data = response;
+  // let data = fakeData;
   let returnId = new Array();
   let index = startIdx - 1;
   let returnAction4 = new Array();
 
   let i, j = 0;
   for (i = 0; i < data.length; i++) {
-    if(data.foodName!=foodName)continue;
-    if (index > 0) {
-      index--;
-      console.log("Check" + index);
-      continue;
-    }
+    // if(data.foodName!=foodName)continue;
+    // if (index > 0) {
+    //   index--;
+    //   console.log("Check" + index);
+    //   continue;
+    // }
     // 데이터 값을 받아와서 Obj안에 넣은 후 리턴배열에 푸쉬
     let returnObj = new Object();
     returnObj.id = j + startIdx;
