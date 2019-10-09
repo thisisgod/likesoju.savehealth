@@ -1,0 +1,31 @@
+layout-macro-def (action4-summary) {
+  params {
+    param (returnAction4) {
+      type (ReturnAction4)
+      min (Required) max (One)
+    }
+  }
+  content {
+    thumbnail-card {
+      image-position (End)
+      image-url ("./images/#{value(returnAction4.mainImage)}.png")
+      title-area {
+        halign (Start)
+        slot1 {
+          text {
+            value ("#{value(returnAction4.bodyName)}")
+            style (Title_S)
+          }
+        }
+        slot2 {
+          paragraph {
+            value {
+              template ("#{value(returnAction4.foodDiscription)}")
+            }
+            style (Detail_M)
+          }
+        }
+      }
+    }
+  }
+}
