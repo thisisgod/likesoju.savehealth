@@ -10,6 +10,15 @@ action (Action1) {
       type(Request)
       min (Required) max (One)
     }
+    input (startIdx){
+      type(Index)
+      min (Required) max (One)
+      default-init{
+        intent{
+          goal: Index(1)
+        }
+      }
+    }
   }
   output (ReturnAction1){
     throws{

@@ -1,7 +1,7 @@
 endpoints {
   action-endpoints {
     action-endpoint (Action1) {
-      accepted-inputs (bodyName, request)
+      accepted-inputs (bodyName,startIdx,request)
       local-endpoint (Action1.js)
     }
     action-endpoint (Action2) {

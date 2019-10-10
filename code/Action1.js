@@ -11,54 +11,41 @@ module.exports.function = function action4(bodyName, startIdx, request) {
     }
   };
   let response = http.getUrl(config.get('remote.url') + '/food', options);
+
   let data = response;
   // let data = fakeData;
   let returnId = new Array();
   let index = startIdx - 1;
   let returnAction4 = new Array();
 
-  let i, j = 0;
+  let i, j = 0, k = 0;
+  let recipeArr = new Array();
+
   for (i = 0; i < data.length; i++) {
-    //fakeData part---------------------------------
-    // if(data.bodyName!=bodyName)continue;
-    // if (index > 0) {
-    //   index--;
-    //   console.log("Check" + index);
-    //   continue;
-    // }
-    //-------------------------------------------
-    // 데이터 값을 받아와서 Obj안에 넣은 후 리턴배열에 푸쉬
     let returnObj = new Object();
     returnObj.id = j + startIdx;
     returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDiscription = data[i].foodDiscription;
+    returnObj.foodDescription = data[i].foodDescription;
     returnObj.foodName = data[i].foodName;
-    returnObj.recipeURL = [
-      data[i].recipeUrlOne,
-      data[i].recipeUrlTwo,
-      data[i].recipeUrlThree
-    ];
-    returnObj.recipeName = [
-      data[i].recipeNameOne,
-      data[i].recipeNameTwo,
-      data[i].recipeNameThree,
-    ];
-    returnObj.recipeImage = [
-      data[i].recipeImageOne,
-      data[i].recipeImageTwo,
-      data[i].recipeImageThree,
-    ]
     returnObj.mainImage = data[i].mainImage;
-    // returnObj.recipeUrlOne = data[i].recipeUrlOne;
-    // returnObj.recipeUrlTwo = data[i].recipeUrlTwo;
-    // returnObj.recipeUrlThree = data[i].recipeUrlThree;
-    // returnObj.recipeNameOne = data[i].recipeNameOne;
-    // returnObj.recipeNameTwo = data[i].recipeNameTwo;
-    // returnObj.recipeNameThree = data[i].recipeNameThree;
-    // returnObj.recipeImageOne = data[i].recipeImageOne;
-    // returnObj.recipeImageTwo = data[i].recipeImageTwo;
-    // returnObj.recipeImageThree = data[i].recipeImageThree;
-
+    let recipeOptions = {
+    format: 'json',
+    query: {
+        foodName: returnObj.foodName,
+        type: "food"
+      }
+    };
+    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);
+    for(k=0; k<recipeResponse.length; k++){
+      let recipeObj = new Object();
+      recipeObj.recipeURL = recipeResponse[k].recipeUrl;
+      recipeObj.recipeName = recipeResponse[k].recipeName;
+      recipeObj.recipeImage = recipeResponse[k].recipeImage;
+      console.log(recipeObj);
+      recipeArr.push(recipeObj);
+      delete recipeObj;
+    }
+    returnAction4.recipe = recipeArr;
     returnAction4.push(returnObj);
     delete returnObj;
     console.log(returnAction4);

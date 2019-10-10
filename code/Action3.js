@@ -20,7 +20,11 @@ module.exports.function = function action3 (foodName, bodyName) {
       checkIdx = i;
     }
   }
-  console.log(data[checkIdx].foodDescription);
+
+  returnAction3.foodName = foodName;
+  returnAction3.bodyName = bodyName;
+  returnAction3.isFind = isFind;
+
   if(isFind === true){
     let recipeOptions = {
     format: 'json',
@@ -28,7 +32,7 @@ module.exports.function = function action3 (foodName, bodyName) {
       foodName: foodName
       }
     };
-    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', foodOptions);
+    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);
     let recipeArr = new Array();
     let j;
     for(j=0; j<recipeResponse.length; j++){
@@ -40,12 +44,26 @@ module.exports.function = function action3 (foodName, bodyName) {
       recipeArr.push(recipeObj);
       delete recipeObj;
     }
-    returnAction3.foodName = foodName;
-    returnAction3.bodyName = bodyName;
-    returnAction3.isFind = isFind;
     returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
     returnAction3.foodDescription = String(data[checkIdx].foodDescription);
     returnAction3.recipe = recipeArr;
     return returnAction3;
+  }else{
+    let harmfulOptions = {
+    format: 'json',
+    query: {
+      foodName: foodName,
+      bodyName: bodyName
+      }
+    };
+    let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
+    if(harmfulResponse.length < 1){
+      console.log("관련정보 찾지못함");
+      returnAction3.answer = "관련 정보를 찾지 못했어요.";
+      return returnAction3;
+    }else{
+      returnAction3.foodDescription = String(harmfulResponse[0].description);
+      
+    }
   }
 }
