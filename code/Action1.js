@@ -14,15 +14,13 @@ module.exports.function = function action4(bodyName, startIdx, request) {
 
   let data = response;
   // let data = fakeData;
-  let returnId = new Array();
   let index = startIdx - 1;
   let returnAction4 = new Array();
-
   let i, j = 0, k = 0;
-  let recipeArr = new Array();
 
   for (i = 0; i < data.length; i++) {
     let returnObj = new Object();
+    let recipeArr = new Array();
     returnObj.id = j + startIdx;
     returnObj.bodyName = data[i].bodyName;
     returnObj.foodDescription = data[i].foodDescription;
@@ -41,13 +39,14 @@ module.exports.function = function action4(bodyName, startIdx, request) {
       recipeObj.recipeURL = recipeResponse[k].recipeUrl;
       recipeObj.recipeName = recipeResponse[k].recipeName;
       recipeObj.recipeImage = recipeResponse[k].recipeImage;
-      console.log(recipeObj);
       recipeArr.push(recipeObj);
       delete recipeObj;
     }
-    returnAction4.recipe = recipeArr;
+    returnObj.recipe = recipeArr;
+    console.log(recipeArr);
     returnAction4.push(returnObj);
     delete returnObj;
+    delete recipeArr
     console.log(returnAction4);
     j++;
     if (j == 3) break;
