@@ -16,9 +16,9 @@ structure (ReturnAction3) {
     type (IsFind)
     min (Required) max (One)
   }
-  property(foodDisCription){
+  property(foodDescription){
     type (FoodDescription)
-    min (Optional) max (One)
+    min (Required) max (One)
   }
   property(recipe){
     type(Recipe)

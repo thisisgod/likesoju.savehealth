@@ -8,7 +8,7 @@ structure (ReturnAction1) {
     type (BodyName)
     min (Required) max (One)
   }
-  property(foodDiscription){
+  property(foodDescription){
     type(FoodDescription)
     min (Required) max (One)
   }

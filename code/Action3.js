@@ -11,15 +11,16 @@ module.exports.function = function action3 (foodName, bodyName) {
   };
   let response = http.getUrl(config.get('remote.url') + '/food', foodOptions);
   let data = response;
-  let i;
+  let i,checkIdx;
   let returnAction3 = new Object();
   let isFind = false;
   for(i=0; i<data.length; i++){
     if(data[i].bodyName == String(bodyName)){
       isFind = true;
-      break;
+      checkIdx = i;
     }
   }
+  console.log(data[checkIdx].foodDescription);
   if(isFind === true){
     let recipeOptions = {
     format: 'json',
@@ -32,22 +33,19 @@ module.exports.function = function action3 (foodName, bodyName) {
     let j;
     for(j=0; j<recipeResponse.length; j++){
       let recipeObj = new Object();
-      recipeObj = {
-        recipeUrl: recipeResponse.recipeUrl,
-        recipeName: recipeResponse.recipeName,
-        recipeImage: recipeResponse.recipeImage
-      }
+      recipeObj.recipeURL = recipeResponse[j].recipeUrl;
+      recipeObj.recipeName = recipeResponse[j].recipeName;
+      recipeObj.recipeImage = recipeResponse[j].recipeImage;
+      console.log(recipeObj);
       recipeArr.push(recipeObj);
       delete recipeObj;
     }
-    returnAction3 = {
-      foodName: foodName,
-      bodyName: bodyName,
-      isFind: isFind,
-      foodDescription: data.foodDescription,
-      recipe: recipeArr
-    }
-    console.log(returnAction3);
+    returnAction3.foodName = foodName;
+    returnAction3.bodyName = bodyName;
+    returnAction3.isFind = isFind;
+    returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
+    returnAction3.foodDescription = String(data[checkIdx].foodDescription);
+    returnAction3.recipe = recipeArr;
     return returnAction3;
   }
 }
