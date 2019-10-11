@@ -12,7 +12,7 @@ action (Action1) {
     }
     input (startIdx){
       type(Index)
-      min (Required) max (One)
+      min (Optional) max (One)
       default-init{
         intent{
           goal: Index(1)
