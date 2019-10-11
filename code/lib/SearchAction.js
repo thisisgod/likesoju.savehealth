@@ -29,7 +29,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
         foodName: returnObj.foodName
       }
     };
-    console.log(returnObj.foodName);
     let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);
     for(k=0; k<recipeResponse.length; k++){
       let recipeObj = new Object();
@@ -47,7 +46,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
     if (j == 3) break;
   }
   for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-  console.log("SearchAction1 result : " + returnAction1);
   return returnAction1;
 }
 // ---------------------------------------------------------------------------------------------------
@@ -82,7 +80,7 @@ exports.searchAction4 = function action4(foodName, startIdx) {
         foodName: foodName
       }
     };
-    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);
+    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', options);
     for(k=0; k<recipeResponse.length; k++){
       let recipeObj = new Object();
       recipeObj.recipeURL = recipeResponse[k].recipeUrl;
@@ -92,11 +90,9 @@ exports.searchAction4 = function action4(foodName, startIdx) {
       delete recipeObj;
     }
     returnObj.recipe = recipeArr;
-    console.log(recipeArr);
     returnAction4.push(returnObj);
     delete returnObj;
     delete recipeArr
-    console.log(returnAction4);
     j++;
     if (j == 3) break;
   }

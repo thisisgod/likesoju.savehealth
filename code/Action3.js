@@ -50,7 +50,6 @@ module.exports.function = function action3(foodName, bodyName) {
     returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
     returnAction3.foodDescription = String(data[checkIdx].foodDescription);
     returnAction3.recipe = recipeArr;
-    //console.log(returnAction3);
     return returnAction3;
   } else {
     let harmfulOptions = {
@@ -61,23 +60,24 @@ module.exports.function = function action3(foodName, bodyName) {
       }
     };
     let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
-    //console.log(harmfulResponse);
     if (harmfulResponse.length < 1) {
-      console.log("관련정보 찾지못함");
       infoJudge = false;
       let returnAction1 = new Object();
       let returnAction4 = new Object();
       returnAction3.infoJudge = infoJudge;
-      console.log(search.searchAction1(bodyName, startIdx));
       returnAction1 = search.searchAction1(bodyName, startIdx);
+      returnAction4 = search.searchAction4(foodName, startIdx);
+
       returnAction3.returnAction1 = returnAction1;
+      returnAction3.returnAction4 = returnAction4;
+      console.log(search.searchAction1(bodyName, startIdx));
       // 문구 수정필요
       // 1. 블루베리가 좋은 신체부위
       // 2. 블루베리가 안좋은 신체부위
       // 3. 눈에 좋은 음식
       // 4. 눈에 안좋은 음식
       returnAction3.answer = "관련 정보를 찾지 못했어요.";
-      //console.log(returnAction3);
+
       return returnAction3;
     } else {
       infoJudge = true;
