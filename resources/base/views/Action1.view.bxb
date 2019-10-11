@@ -1,0 +1,49 @@
+result-view{
+  match : ReturnAction1(this){
+    from-output:Action1
+  }
+
+  message{  //다이얼
+    template ("#{value(this.bodyName)}에 좋은 음식을 찾아봤어요.")
+  }
+
+  render{   //레이아웃
+    if (size(this) > 1) {   //여러개 일 때 리스트로 보여줌
+      list-of (this) {
+        //has-details (true)
+        where-each (item) {
+          layout-macro (list-food-card) {
+            param (returnAction1) {
+              expression (item)
+            }
+          }
+        }
+      }
+    } else-if (size(this) == 1) { //하나일 때or선택했을 때 상세 화면으로 보여줌
+      //layout-match (this) {
+      //  mode (Details)
+      //}
+      //자세한 설명을 보여줄 layout이 필요함
+      if(size(this.recipe)>=1){
+        list-of (this.recipe){
+          where-each (recipe){
+            layout-macro (list-recipe){
+              param (recipe){
+                expression (this.recipe)
+              }
+            }
+          }
+        }
+      }
+      else{
+        //관련 레시피가 하나도 없을 때
+      }
+    }
+  }
+
+  conversation-drivers{ //hint
+    conversation-driver{
+      template ("")
+    }
+  }
+}

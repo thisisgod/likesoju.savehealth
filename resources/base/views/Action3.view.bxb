@@ -1,0 +1,32 @@
+result-view{
+  match : ReturnAction3(this){
+    from-output:Action3
+  }
+
+  message{  //다이얼
+    template ("#{value(this.answer)}")
+  }
+
+  render{ //레이아웃
+  if(this.isFind){
+        //좋은 음식
+      }
+      else{
+        if(this.infoJudge){
+          //나쁜 음식\
+      
+        }
+        else{
+          //찾을 수 없음
+      
+        }
+      }
+    
+  }
+
+  conversation-drivers{
+    conversation-driver{
+      template ("")
+    }
+  }
+}
