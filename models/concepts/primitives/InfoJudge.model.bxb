@@ -1,0 +1,3 @@
+boolean (InfoJudge) {
+  description (정보가 있음, 없음을 판단하는 변수, true == 정보있음)
+}

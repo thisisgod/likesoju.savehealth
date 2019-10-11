@@ -22,7 +22,7 @@ layout-macro-def (action4-detail) {
           }
         }
         paragraph {
-          value ("#{value(returnAction4.foodDiscription)}")
+          value ("#{value(returnAction4.foodDescription)}")
           style (Detail_M)
         }
         //partitioned {

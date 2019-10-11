@@ -12,6 +12,7 @@ module.exports.function = function action3 (foodName, bodyName) {
   let response = http.getUrl(config.get('remote.url') + '/food', foodOptions);
   let data = response;
   let i,checkIdx;
+  let infoJudge = new Boolean();
   let returnAction3 = new Object();
   let isFind = false;
   for(i=0; i<data.length; i++){
@@ -44,6 +45,7 @@ module.exports.function = function action3 (foodName, bodyName) {
       recipeArr.push(recipeObj);
       delete recipeObj;
     }
+    // 문구 수정 필요
     returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
     returnAction3.foodDescription = String(data[checkIdx].foodDescription);
     returnAction3.recipe = recipeArr;
@@ -59,10 +61,18 @@ module.exports.function = function action3 (foodName, bodyName) {
     let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
     if(harmfulResponse.length < 1){
       console.log("관련정보 찾지못함");
+      infoJudge = false;
+      returnAction3.infoJudge = infoJudge;
+      // 문구 수정필요
       returnAction3.answer = "관련 정보를 찾지 못했어요.";
       return returnAction3;
     }else{
+      infoJudge = true;
+      returnAction3.infoJudge = infoJudge;
+      // 문구 수정필요
+      returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
       returnAction3.foodDescription = String(harmfulResponse[0].description);
+      return returnAction3;
       
     }
   }

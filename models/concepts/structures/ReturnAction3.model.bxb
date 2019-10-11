@@ -16,6 +16,10 @@ structure (ReturnAction3) {
     type (IsFind)
     min (Required) max (One)
   }
+  property (infoJudge){
+    type (InfoJudge)
+    min (Optional) max (One)
+  }
   property(foodDescription){
     type (FoodDescription)
     min (Optional) max (One)

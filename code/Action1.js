@@ -2,18 +2,15 @@ module.exports.function = function action4(bodyName, startIdx, request) {
   const console = require('console');
   const config = require('config');
   const http = require('http');
-  // const fakeData = require('./data/fakeData.js');
   let options = {
     format: 'json',
     query: {
-      bodyName: bodyName,
-      type: "food"
+      bodyName: bodyName
     }
   };
   let response = http.getUrl(config.get('remote.url') + '/food', options);
 
   let data = response;
-  // let data = fakeData;
   let index = startIdx - 1;
   let returnAction4 = new Array();
   let i, j = 0, k = 0;
@@ -29,8 +26,7 @@ module.exports.function = function action4(bodyName, startIdx, request) {
     let recipeOptions = {
     format: 'json',
     query: {
-        foodName: returnObj.foodName,
-        type: "food"
+        foodName: returnObj.foodName
       }
     };
     let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);

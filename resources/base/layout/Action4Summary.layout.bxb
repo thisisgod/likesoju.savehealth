@@ -20,7 +20,7 @@ layout-macro-def (action4-summary) {
         slot2 {
           paragraph {
             value {
-              template ("#{value(returnAction4.foodDiscription)}")
+              template ("#{value(returnAction4.foodDescription)}")
             }
             style (Detail_M)
           }
