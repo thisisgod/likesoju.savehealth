@@ -1,0 +1,36 @@
+layout-macro-def (list-recipe){ //액션1에서 선택시 사용됨
+  params {
+    param (recipe) {
+      type (Recipe)
+      min (Required) max (One)
+    }
+  }
+
+  content{
+    compound-card {
+      content {
+        image-card {
+          aspect-ratio (4:3)
+          image-url ("#{value(recipe.recipeImage)}.png")
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("#{value(recipe.recipeName)}")
+                style (Title_M)
+              }
+            }
+          }
+        }
+        single-line {
+          text {
+            value {
+              template ("#{value(recipe.recipeURL)}")
+            }
+            style (Title_M)
+          }
+        }
+      }
+    }
+  }
+}

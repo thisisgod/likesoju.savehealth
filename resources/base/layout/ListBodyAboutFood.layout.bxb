@@ -1,0 +1,31 @@
+layout-macro-def (list-body-about-food) { //액션4에 대한 결과
+  params {
+    param (returnAction4) {
+      type (ReturnAction4)
+      min (Required) max (One)
+    }
+  }
+  content {
+    thumbnail-card {
+      image-position (End)
+      image-url ("./images/#{value(returnAction4.mainImage)}.png")
+      title-area {
+        halign (Start)
+        slot1 {
+          text {
+            value ("#{value(returnAction4.bodyName)}")
+            style (Title_S)
+          }
+        }
+        slot2 {
+          single-line {
+            text {
+              value ("#{value(returnAction4.foodDescription)}")
+              style(Detail_L_Soft)
+            }
+          }
+        }
+      }
+    }
+  }
+}
