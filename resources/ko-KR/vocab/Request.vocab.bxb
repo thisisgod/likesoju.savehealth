@@ -1,13 +1,13 @@
 vocab(Request){
-  "FoodName"{
-    "음식"
-    "재료"
-    "식자재"
-    "먹을거"
-    "거"
+  "Good"{
+    "좋은 재료"
+    "좋은 것"
+    "좋은 거"
   }
-  "HealthFunctionalFoodName"{
-    "건강기능식품"
-    "영양제"
+  "Harmful"{
+    "안되는 음식"
+    "안좋은 것"
+    "안좋은 음식"
+    "안좋은 재료"
   }
 }

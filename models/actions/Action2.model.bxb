@@ -6,8 +6,8 @@ action (Action2) {
       type (BodyName)
       min (Required) max (One)
     }
-    input(request){
-      type(Request)
+    input (request){
+      type (Request)
       min (Required) max (One)
     }
   }

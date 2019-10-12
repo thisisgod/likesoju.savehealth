@@ -32,6 +32,10 @@ structure (ReturnAction3) {
     type(ReturnAction1)
     min (Optional) max (Many)
   }
+  property (returnAction2){
+    type(ReturnAction2)
+    min (Optional) max (Many)
+  }
   property(returnAction4){
     type (ReturnAction4)
     min (Optional) max (Many)

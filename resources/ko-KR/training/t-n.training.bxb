@@ -1,5 +1,10 @@
+train (t-ne1hxr0hbjjonvhpk1pk4460k) {
+  utterance ("[g:ReturnAction2] (임산부)[v:BodyName]한테 (안좋은 음식)[v:Request:Harmful] 알려줘")
+  plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNiEEOThYmLo4k75adU+iXmpmJoCEotLE0tLmFgZmBkYAKSDEAaBCEAxAeLAgA=)
+  last-modified (1570857519388)
+}
 train (t-nhfxvjoefst29k325y1p0nbl5) {
   utterance ("[g:ReturnAction4] (생강)[v:FoodName]이 어디에 좋은지 알려줘")
   plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpjKIoEl45qWkVjAwMzAyMAFJBiANghDABMEA)
-  last-modified (1570545344248)
+  last-modified (1570857345053)
 }

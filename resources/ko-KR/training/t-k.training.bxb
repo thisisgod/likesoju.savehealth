@@ -1,3 +1,8 @@
+train (t-kaf1j2ipfqw0xrmj2arguua2o) {
+  utterance ("[g:ReturnAction2] (혈액순환)[v:BodyName]에 (안좋은게)[v:Request:Harmful] 뭐야?")
+  plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNiEEOThYmLo4k75adU+iXmpmJoCEotLE0tLmFgZmBkYAKSDEAaBCEAxAeLAgA=)
+  last-modified (1570857726636)
+}
 train (t-kx4dnh42wbecg40gs0rlrffqe) {
   utterance ("[g:ReturnAction4] (꿀)[v:FoodName]의 효능 알려줘")
   plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpjKIoEl45qWkVjAwMzAyMAFJBiANghDABMEA)

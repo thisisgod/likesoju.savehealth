@@ -1,0 +1,5 @@
+train (t-1khxi9vunzf4b0fvzu0rnse92) {
+  utterance ("[g:ReturnAction1] (혈액순환)[v:BodyName]에 (좋은게)[v:Request:Good] 뭐야?")
+  plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNkEEOThYmLo4k75adU+iXmpmJoCEotLE0tLmFgZmBkYAKSDEAaBCEAxAeLAgA=)
+  last-modified (1570857687604)
+}
