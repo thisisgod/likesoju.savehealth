@@ -11,7 +11,9 @@ layout-macro-def (list-recipe){ //액션1에서 선택시 사용됨
       content {
         image-card {
           aspect-ratio (4:3)
-          image-url ("#{value(recipe.recipeImage)}.png")
+          image-url{
+            template ("./images/#{value(recipe.recipeImage)}.png")
+          }
           title-area {
             halign (Start)
             slot1 {
@@ -20,14 +22,6 @@ layout-macro-def (list-recipe){ //액션1에서 선택시 사용됨
                 style (Title_M)
               }
             }
-          }
-        }
-        single-line {
-          text {
-            value {
-              template ("#{value(recipe.recipeURL)}")
-            }
-            style (Title_M)
           }
         }
       }
