@@ -1,0 +1,15 @@
+layout {
+  match: ReturnAction4 (this)
+  mode (Details)
+
+  content {
+    section {
+      content {
+        paragraph {
+          value ("")
+          style (Title_L)
+        }
+      }
+    }
+  }
+}
