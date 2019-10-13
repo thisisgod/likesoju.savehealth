@@ -1,0 +1,3 @@
+boolean (Harmful) {
+  description (액션1에서 해로운것과 안해로운것을 구분해주는 boolean)
+}
