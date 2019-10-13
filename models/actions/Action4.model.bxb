@@ -8,10 +8,32 @@ action (Action4) {
     }
     input (startIdx){
       type(Index)
-      min (Required) max (One)
+      min (Optional) max (One)
       default-init{
         intent{
           goal: Index(1)
+        }
+      }
+    }
+    input (request){
+      type (Request)
+      min (Optional) max (One)
+      default-init{
+        intent{
+          goal: Request(Good)
+        }
+      }
+    }
+    input (requestKeyword){
+      type (RequestKeyword)
+      min (Optional) max (One)
+    }
+    input (searchKeyword){
+      type(SearchKeyword)
+      min (Optional) max (One)
+      default-init{
+        intent{
+          goal: SearchKeyword(검색)
         }
       }
     }

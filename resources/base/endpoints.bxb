@@ -1,7 +1,7 @@
 endpoints {
   action-endpoints {
     action-endpoint (Action1) {
-      accepted-inputs (bodyName,startIdx,request)
+      accepted-inputs (bodyName,startIdx,request, requestKeyword, searchKeyword)
       local-endpoint (Action1.js)
     }
     action-endpoint (Action2) {
@@ -9,11 +9,11 @@ endpoints {
       local-endpoint (Action2.js)
     }
     action-endpoint (Action3) {
-      accepted-inputs (foodName, bodyName)
+      accepted-inputs (foodName, bodyName, searchKeyword)
       local-endpoint (Action3.js)
     }
     action-endpoint (Action4) {
-      accepted-inputs (foodName, startIdx)
+      accepted-inputs (foodName, startIdx, request, requestKeyword, searchKeyword)
       local-endpoint (Action4.js)
     }
   }

@@ -1,5 +1,5 @@
 train (t-4lux9jlza8eo7j24bwifca1wc) {
-  utterance ("[g:ReturnAction4] (블루베리)[v:FoodName]가 어디에 좋아?")
-  plan (Y2BhkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpjKIoEl45qWkVjAwMzAyMAFJBiANghDABMEA)
-  last-modified (1570382715406)
+  utterance ("[g:ReturnAction4] (블루베리)[v:FoodName]가 (어디에)[v:RequestKeyword:Body] (좋아)[v:Request:Good]?")
+  plan (Y2BjkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpmJoCEotLE0tLmGQxS7unVpZnl+UguGK4NTEouQMmCwrAyMDEwMzAwuQxQBkwyACsAAxRAUDAA==)
+  last-modified (1570968346283)
 }
