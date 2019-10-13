@@ -2,13 +2,11 @@ layout-macro-def (list-body-about-food) { //액션4에 대한 결과
   params {
     param (returnAction4) {
       type (ReturnAction4)
-      min (Required) max (One)
+      min (Required) max (Many)
     }
   }
   content {
-    thumbnail-card {
-      image-position (End)
-      image-url ("./images/#{value(returnAction4.mainImage)}.png")
+    title-card {
       title-area {
         halign (Start)
         slot1 {
