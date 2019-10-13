@@ -1,5 +1,0 @@
-train (t-5o43k99qs4ub1dy1rkhipz32g) {
-  utterance ("[g:ReturnAction3] (블루베리)[v:FoodName]가 (눈)[v:BodyName]에 (좋은)[v:Request:Good] 지 (알려줘)[v:SearchKeyword:검색]")
-  plan (Y2BjECvISaxML8ovzUvRS6pI0gtKLSxNLS5hkMEQLyktynNMLsnMzzPG0AUTF0cTd8pPqfRLzE3FkHDLz08BS6DbE5yaWJSc4Z1aWZ5flMLAwsDEwAwkWRkYgSwQZGSAAEawGEiOAchiAAA=)
-  last-modified (1570970378123)
-}

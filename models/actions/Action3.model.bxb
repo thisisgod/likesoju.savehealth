@@ -10,6 +10,10 @@ action (Action3) {
       type (BodyName)
       min (Required) max (One)
     }
+    input (request){
+      type(Request)
+      min (Required) max (One)
+    }
     input (searchKeyword){
       type(SearchKeyword)
       min (Optional) max (One)
@@ -18,10 +22,6 @@ action (Action3) {
           goal: SearchKeyword(검색)
         }
       }
-    }
-    input (request){
-      type(Request)
-      min (Required) max (One)
     }
   }
   output (ReturnAction3){

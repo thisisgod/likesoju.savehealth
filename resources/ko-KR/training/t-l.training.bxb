@@ -1,0 +1,5 @@
+train (t-ln8kd33l4naxo07onynd39wdz) {
+  utterance ("[g:ReturnAction3] (도라지)[v:FoodName]가 (피부)[v:BodyName]에 (좋은)[v:Request:Good] 지 (알려줘)[v:SearchKeyword:검색]")
+  plan (Y2BjkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNmEEOThYmLo4k75adU+iXmpmJIuOXnp4AlxDDsKSxNLS7BsD84NbEoOcM7tbI8vyiFgZWBkYGJgZmBBchiALJhEAFA4nAVAA==)
+  last-modified (1570972256516)
+}
