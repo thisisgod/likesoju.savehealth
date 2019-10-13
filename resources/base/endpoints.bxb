@@ -9,7 +9,7 @@ endpoints {
       local-endpoint (Action2.js)
     }
     action-endpoint (Action3) {
-      accepted-inputs (foodName, bodyName, searchKeyword)
+      accepted-inputs (foodName, bodyName, searchKeyword, request)
       local-endpoint (Action3.js)
     }
     action-endpoint (Action4) {

@@ -19,6 +19,10 @@ action (Action3) {
         }
       }
     }
+    input (request){
+      type(Request)
+      min (Required) max (One)
+    }
   }
   output (ReturnAction3){
     throws{
