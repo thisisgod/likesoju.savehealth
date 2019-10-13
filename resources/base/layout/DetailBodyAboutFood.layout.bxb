@@ -21,11 +21,9 @@ layout-macro-def (detail-body-about-food) { //액션 4에 대한 결과
             }
           }
         }
-        single-line {
-          text{
-            value ("#{value(returnAction4.foodDescription)}")
-            style (Detail_M_Soft)
-          }
+        paragraph {
+          value ("#{value(returnAction4.foodDescription)}")
+          style (Detail_M_Soft)
         }
         //partitioned {
         //  content {
