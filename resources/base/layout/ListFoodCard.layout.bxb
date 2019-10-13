@@ -11,7 +11,7 @@ layout-macro-def (list-food-card){  //액션1에 대한 결과
       content {
         image-card {
           aspect-ratio (4:3)
-          image-url ("#{value(returnAction1.mainImage)}.png")
+          image-url ("./images/#{value(returnAction1.mainImage)}.png")
           title-area {
             halign (Start)
             slot1 {
@@ -22,27 +22,11 @@ layout-macro-def (list-food-card){  //액션1에 대한 결과
             }
           }
         }
-        single-line {
-          text {
-            value {
-              template ("#{value(returnAction1.foodDescription)}")
-            }
-            style (Detail_L_Soft)
-          }
-        }
         //paragraph {
         //  value {
         //    template ("#{value(returnAction1.foodDescription)}")
         //  }
         //  style (Detail_L_Soft)
-        //}
-        //single-line {
-        //  text {
-        //    value {
-        //      template ("#{value(flower.deliveryType)}")
-        //    }
-        //    style (Detail_M_Soft)
-        //  }
         //}
       }
     }

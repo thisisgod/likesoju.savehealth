@@ -18,7 +18,7 @@ structure (ReturnAction3) {
   }
   property (infoJudge){
     type (InfoJudge)
-    min (Optional) max (One)
+    min (Required) max (One)
   }
   property(foodDescription){
     type (FoodDescription)

@@ -19,24 +19,27 @@ result-view{
           }
         }
       }
-    } else-if (size(this) == 1) { //하나일 때or선택했을 때 상세 화면으로 보여줌
-      //layout-match (this) {
-      //  mode (Details)
-      //}
-      //자세한 설명을 보여줄 layout이 필요함
-      if(size(this.recipe)>=1){
-        list-of (this.recipe){
-          where-each (recipe){
-            layout-macro (list-recipe){
-              param (recipe){
-                expression (this.recipe)
+    } else-if (size(this) == 1&&size(this.recipe)>0) { //하나일 때or선택했을 때 상세 화면으로 보여줌
+      layout{
+        section{
+          content{
+            for-each (this.recipe){
+              as (item){
+                layout-macro (list-recipe){
+                  param (recipe){
+                    expression (item)
+                  }
+                }
+                attribution-link{
+                  label{
+                    template ("#{value(item.recipeName)} 레시피 보기")
+                  }
+                  url("#{value(item.recipeURL)}")
+                }
               }
             }
           }
         }
-      }
-      else{
-        //관련 레시피가 하나도 없을 때
       }
     }
   }
