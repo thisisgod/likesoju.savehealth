@@ -17,7 +17,7 @@ layout-macro-def (detail-body-about-food) { //액션 4에 대한 결과
           slot1 {
             text {
               value ("#{value(returnAction4.bodyName)}")
-              style (Title_L)
+              style (Title_M)
             }
           }
         }
@@ -25,20 +25,6 @@ layout-macro-def (detail-body-about-food) { //액션 4에 대한 결과
           value ("#{value(returnAction4.foodDescription)}")
           style (Detail_M_Soft)
         }
-        //partitioned {
-        //  content {
-        //    for-each (returnAction4.attributes) {
-        //      as (attribute) {
-        //        single-line {
-        //          text {
-        //            value ("#{value(attribute)}")
-        //            style (Detail_L)
-        //          }
-        //        }
-        //      }
-        //    }
-        //  }
-        //}
       }
     }
   }
