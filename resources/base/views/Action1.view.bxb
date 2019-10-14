@@ -4,7 +4,7 @@ result-view{
   }
 
   message{  //다이얼
-    template ("#{value(this.bodyName)}에 좋은 음식을 찾아봤어요.")
+    template ("#{value(this.bodyName)}에 관한 음식을 찾아봤어요.")
   }
 
   render{   //레이아웃
@@ -19,26 +19,11 @@ result-view{
           }
         }
       }
-    } else-if (size(this) == 1&&size(this.recipe)>0) { //하나일 때or선택했을 때 상세 화면으로 보여줌
-      layout{
-        section{
-          content{
-            for-each (this.recipe){
-              as (item){
-                layout-macro (list-recipe){
-                  param (recipe){
-                    expression (item)
-                  }
-                }
-                attribution-link{
-                  label{
-                    template ("#{value(item.recipeName)} 레시피 보기")
-                  }
-                  url("#{value(item.recipeURL)}")
-                }
-              }
-            }
-          }
+    } 
+    else-if (size(this) == 1) { //하나일 때or선택했을 때 상세 화면으로 보여줌
+      layout-macro (detail-food-about-body){
+        param (returnAction1){
+          expression (this)
         }
       }
     }
