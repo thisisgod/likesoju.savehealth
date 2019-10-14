@@ -1,79 +1,39 @@
 result-view{
-  match : ReturnAction3(this){
-    from-output:Action3
+  match : ReturnAction4(this){
+    from-output:Action4
   }
 
   message{  //다이얼
-    template ("#{value(this.answer)}")
+    template ("#{value(this.foodName)}이(가) 효과적인 부위입니다. ")
   }
 
-  render{ //레이아웃
-    if(this.infoJudge){
-      layout{
-        section{
-          content{
-            title-area{
-              halign (Start)
-              slot1{
-                text{
-                  style(Title_S)
-                  value("설명")
-                }
-              }
+  render{   //레이아웃
+    if (size(this) > 1) {   //여러개 일 때 리스트로 보여줌
+      list-of (this) {
+        //has-details (true)
+        where-each (item) {
+          layout-macro (list-body-about-food) {
+            param (returnAction4) {
+              expression (item)
             }
-            paragraph{
-              style(Detail_L_Soft)
-              value("#{value(this.foodDescription)}")
-            }
-            //if(!this.isFind){
-              //나쁠 때
-            //}
           }
         }
-        
       }
-    }
-    else{
-      layout{
-        section{
-          content{
-            if(size(this.returnAction1)>1){
-              for-each (this.returnAction1){
-                as (item){
-                  layout-macro (list-food-card) {
-                    param (returnAction1) {
-                      expression (item)
-                    }
-                  }
-                }
-              }
-            }
-            //else{
-
-            //}
-            if(size(this.returnAction4)>1){
-              for-each (this.returnAction4){
-                as (item){
-                  layout-macro (list-body-about-food) {
-                    param (returnAction4) {
-                      expression (item)
-                    }
-                  }
-                }
-              }
-            }
-            //else{
-              
-            //}
-          }
+    } else-if (size(this) == 1) { //하나일 때or선택했을 때 상세 화면으로 보여줌
+      //layout-match (this) {
+      //  mode (Details)
+      //}
+      layout-macro (detail-body-about-food){
+        param (returnAction4){
+          expression (this)
         }
       }
     }
   }
 
-  conversation-drivers{
+  conversation-drivers{ //hint
     conversation-driver{
-      template ("")
+      template ("다음 결과 #{value(this.index)}번째 부터 보여줘")
     }
   }
 }
