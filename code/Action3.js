@@ -47,11 +47,12 @@ module.exports.function = function action3(foodName, bodyName, searchKeyword, re
       delete recipeObj;
     }
     // 문구 수정 필요
-    infoJudge=true;
-    returnAction3.infoJudge=infoJudge;
+    infoJudge = true;
+    returnAction3.infoJudge = infoJudge;
     returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
     returnAction3.foodDescription = String(data[checkIdx].foodDescription);
     returnAction3.recipe = recipeArr;
+    console.log(returnAction3);
     return returnAction3;
   } else {
     let harmfulOptions = {
@@ -78,8 +79,8 @@ module.exports.function = function action3(foodName, bodyName, searchKeyword, re
       // 2. 블루베리가 안좋은 신체부위
       // 3. 눈에 좋은 음식
       // 4. 눈에 안좋은 음식
-      returnAction3.answer = foodName + "과 " + bodyName+"관련 정보를 찾아봤어요.";
-      
+      returnAction3.answer = foodName + "과 " + bodyName + "관련 정보를 찾아봤어요.";
+      console.log(returnAction3);
       return returnAction3;
     } else {
       infoJudge = true;
@@ -87,6 +88,7 @@ module.exports.function = function action3(foodName, bodyName, searchKeyword, re
       // 문구 수정필요
       returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
       returnAction3.foodDescription = String(harmfulResponse[0].description);
+      console.log(returnAction3);
       return returnAction3;
 
     }
