@@ -4,7 +4,7 @@ result-view{
   }
 
   message{  //다이얼
-    template ("#{value(this.foodName)}이(가) 효과적인 부위입니다. ")
+    template ("#{value(this.foodName)}이(가)  부위입니다. ")
   }
 
   render{   //레이아웃
