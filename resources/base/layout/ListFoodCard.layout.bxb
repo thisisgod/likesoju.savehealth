@@ -13,7 +13,7 @@ layout-macro-def (list-food-card){  //액션1에 대한 결과
           aspect-ratio (4:3)
           image-url ("./images/#{value(returnAction1.mainImage)}.png")
           title-area {
-            halign (Start)
+            halign (End)
             slot1 {
               text {
                 value ("#{value(returnAction1.foodName)}")
@@ -22,12 +22,6 @@ layout-macro-def (list-food-card){  //액션1에 대한 결과
             }
           }
         }
-        //paragraph {
-        //  value {
-        //    template ("#{value(returnAction1.foodDescription)}")
-        //  }
-        //  style (Detail_L_Soft)
-        //}
       }
     }
   }
