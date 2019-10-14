@@ -24,6 +24,7 @@ exports.searchAction1 = function (bodyName, startIdx) {
     returnObj.foodDescription = data[i].foodDescription;
     returnObj.foodName = data[i].foodName;
     returnObj.mainImage = data[i].mainImage;
+    returnObj.harmful = harmful;
     let recipeOptions = {
       format: 'json',
       query: {
@@ -36,7 +37,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
       recipeObj.recipeURL = recipeResponse[k].recipeUrl;
       recipeObj.recipeName = recipeResponse[k].recipeName;
       recipeObj.recipeImage = recipeResponse[k].recipeImage;
-      recipeObj.harmful = harmful;
       recipeArr.push(recipeObj);
       delete recipeObj;
     }
@@ -48,6 +48,7 @@ exports.searchAction1 = function (bodyName, startIdx) {
     if (j == 3) break;
   }
   for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
+  console.log(returnAction1);
   return returnAction1;
 }
 // ---------------------------------------------------------------------------------------------------
@@ -64,6 +65,7 @@ exports.searchAction4 = function (foodName, startIdx) {
   let response = http.getUrl(config.get('remote.url') + '/food', options);
   let data = response;
   let index = startIdx - 1;
+  let harmful = false;
   let returnAction4 = new Array();
   let i, j = 0, k = 0;
 
@@ -75,6 +77,7 @@ exports.searchAction4 = function (foodName, startIdx) {
     returnObj.foodDescription = data[i].foodDescription;
     returnObj.foodName = data[i].foodName;
     returnObj.mainImage = data[i].mainImage;
+    returnObj.harmful = harmful;
 
     let recipeOptions = {
       format: 'json',
@@ -99,6 +102,7 @@ exports.searchAction4 = function (foodName, startIdx) {
     if (j == 3) break;
   }
   for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
+  console.log(returnAction4);
   return returnAction4;
 }
 exports.searchAction1_harmful = function (bodyName, startIdx) {
@@ -136,5 +140,35 @@ exports.searchAction1_harmful = function (bodyName, startIdx) {
 
 }
 exports.searchAction4_harmful = function (foodName, startIdx) {
+  const console = require('console');
+  const config = require('config');
+  const http = require('http');
+  let options = {
+    format: 'json',
+    query: {
+      foodName: foodName
+    }
+  };
+  let response = http.getUrl(config.get('remote.url') + '/harmful', options);
+  let data = response;
+  let index = startIdx - 1;
+  let returnAction4 = new Array();
+  let harmful = true;
+  let i, j = 0;
 
+  for (i = 0; i < data.length; i++) {
+    let returnObj = new Object();
+    returnObj.id = j + startIdx;
+    returnObj.bodyName = data[i].bodyName;
+    returnObj.description = data[i].description;
+    returnObj.foodName = data[i].foodName;
+    returnObj.harmful = harmful;
+    returnAction4.push(returnObj);
+    delete returnObj;
+    j++;
+    if (j == 3) break;
+  }
+  for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
+  console.log(returnAction4);
+  return returnAction4;
 }
