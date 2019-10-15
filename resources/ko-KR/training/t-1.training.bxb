@@ -1,5 +1,5 @@
 train (t-1khxi9vunzf4b0fvzu0rnse92) {
   utterance ("[g:ReturnAction1] (혈액순환)[v:BodyName]에 (좋은)[v:Request:Good] (게)[v:RequestKeyword:Food] (뭐야)[v:SearchKeyword:검색]?")
-  plan (Y2BjkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNkEEOThYmLo4k75adU+iXmpmJoCEotLE0tLmGQxS7unVpZnl+UguGK4NTEouQMmCwrAyMDEwMzAwuQxQBkwyACgMThKgA=)
-  last-modified (1570968318803)
+  plan (Y2BjUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2SQxqYEJimDTdIpP6XSLzE3FbvWoNTC0tTiEgYlPJLeqZXl+UUp2J0XnJpYlJwBU8LKwMjAxMDMwAJkMQDZMIgAIHG4CgA=)
+  last-modified (1571124935729)
 }

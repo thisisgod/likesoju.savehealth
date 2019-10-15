@@ -1,5 +1,5 @@
 train (t-4lux9jlza8eo7j24bwifca1wc) {
   utterance ("[g:ReturnAction4] (블루베리)[v:FoodName]가 (어디에)[v:RequestKeyword:Body] (좋은)[v:Request:Good] 지 (알려줘)[v:SearchKeyword:검색]")
-  plan (Y2BjkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpmJoCEotLE0tLmGQxS7unVpZnl+UguGK4NTEouQMmCwrAyMDEwMzAwuQxQBkwyACgMThKgA=)
-  last-modified (1570970373855)
+  plan (Y2BjUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2GQxqYEJimDTdItPz/FLzE3FbvWoNTC0tTiEgYlPJLeqZXl+UUp2J0XnJpYlJwBU8LKwMjAxMDMwAJkMQDZMIgAIHG4CgA=)
+  last-modified (1571124936034)
 }

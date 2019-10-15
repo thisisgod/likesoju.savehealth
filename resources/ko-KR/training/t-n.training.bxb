@@ -1,10 +1,10 @@
 train (t-ne1hxr0hbjjonvhpk1pk4460k) {
   utterance ("[g:ReturnAction1] (임산부)[v:BodyName]한테 (안좋은)[v:Request:Harmful] (음식)[v:RequestKeyword:Food] (알려줘)[v:SearchKeyword:검색]")
-  plan (Y2BjkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNkEEOThYmLo4k75adU+iXmpmJoCEotLE0tLmGQxS7unVpZnl+UguGK4NTEouQMmCwrAyMDEwMzAwuQxQBkwyACgMThKgA=)
-  last-modified (1570968144747)
+  plan (Y2BjUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2SQxqYEJimDTdIpP6XSLzE3FbvWoNTC0tTiEgYlPJLeqZXl+UUp2J0XnJpYlJwBU8LKwMjAxMDMwAJkMQDZMIgAIHG4CgA=)
+  last-modified (1571124936393)
 }
 train (t-nhfxvjoefst29k325y1p0nbl5) {
   utterance ("[g:ReturnAction4] (생강)[v:FoodName]이 (어디에)[v:RequestKeyword:Body] (좋은)[v:Request:Good] 지 (알려줘)[v:SearchKeyword:검색]")
-  plan (Y2BjkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpmJoCEotLE0tLmGQxS7unVpZnl+UguGK4NTEouQMmCwrAyMDEwMzAwuQxQBkwyACgMThKgA=)
-  last-modified (1570968276252)
+  plan (Y2BjUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2GQxqYEJimDTdItPz/FLzE3FbvWoNTC0tTiEgYlPJLeqZXl+UUp2J0XnJpYlJwBU8LKwMjAxMDMwAJkMQDZMIgAIHG4CgA=)
+  last-modified (1571124936455)
 }

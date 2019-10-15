@@ -1,10 +1,10 @@
 train (t-kaf1j2ipfqw0xrmj2arguua2o) {
   utterance ("[g:ReturnAction1] (혈액순환)[v:BodyName]에 (안좋은)[v:Request:Harmful] (게)[v:RequestKeyword:Food] (뭐야)[v:SearchKeyword:검색]?")
-  plan (Y2BjkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNkEEOThYmLo4k75adU+iXmpmJoCEotLE0tLmGQxS7unVpZnl+UguGK4NTEouQMmCwrAyMDEwMzAwuQxQBkwyACgMThKgA=)
-  last-modified (1570967903116)
+  plan (Y2BjUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2SQxqYEJimDTdIpP6XSLzE3FbvWoNTC0tTiEgYlPJLeqZXl+UUp2J0XnJpYlJwBU8LKwMjAxMDMwAJkMQDZMIgAIHG4CgA=)
+  last-modified (1571124936153)
 }
 train (t-kx4dnh42wbecg40gs0rlrffqe) {
   utterance ("[g:ReturnAction4] (꿀)[v:FoodName]의 (효능)[v:RequestKeyword:Body] (알려줘)[v:SearchKeyword:검색]")
-  plan (Y2BlkCnISaxML8ovzUvRS6pI0gtKLSktynNMLsnMzzNhEEOThYmLo4m75een+CXmpjLIYhhXWJpaXOKdWlmeX5SCYVtwamJRcgZMloWBkYGJgRlIMwBZEAgDIDGoHAA=)
-  last-modified (1570968067235)
+  plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2GQxqYEJimDTdItPz/FLzE3lUEJu+mFpanFJd6pleX5RSnYXRCcmliUnAFTwsLAyMDEwAykGYAsCIQBkBhUDgA=)
+  last-modified (1571124936261)
 }
