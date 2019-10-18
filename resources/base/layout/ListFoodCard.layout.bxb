@@ -11,7 +11,7 @@ layout-macro-def (list-food-card){  //액션1에 대한 결과
       content {
         image-card {
           aspect-ratio (4:3)
-          image-url ("./images/#{value(returnAction1.mainImage)}.png")
+          image-url ("#{value(returnAction1.mainImage)}")
           title-area {
             halign (End)
             slot1 {
