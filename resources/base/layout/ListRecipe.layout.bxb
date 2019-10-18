@@ -12,7 +12,7 @@ layout-macro-def (list-recipe){ //액션1에서 선택시 사용됨
         image-card {
           aspect-ratio (4:3)
           image-url{
-            template ("./images/#{value(recipe.recipeImage)}.png")
+            template ("#{value(recipe.recipeImage)}")
           }
           title-area {
             halign (Start)
