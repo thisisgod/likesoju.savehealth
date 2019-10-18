@@ -4,7 +4,12 @@ result-view{
   }
 
   message{  //다이얼
-    template ("#{value(this.bodyName)}에 관한 음식을 찾아봤어요.")
+    if(!this.harmful){
+      template ("#{value(this.bodyName)}에 좋은 음식들입니다.")
+    }
+    else{
+      template ("#{value(this.bodyName)}에 나쁜 음식들입니다.")
+    }
   }
 
   render{   //레이아웃
