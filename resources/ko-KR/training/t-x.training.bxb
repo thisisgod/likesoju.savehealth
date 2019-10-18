@@ -1,0 +1,5 @@
+train (t-xmdaa3s4pco0768tkb3rk8t2p) {
+  utterance ("[g:ReturnAction1] (임신)[v:BodyName] 중일 때 {[g:Request] (안 좋은)[v:Request:Harmful]} 음식이 궁금해")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4AsCwMjAxMDM5BmALIYgSxGBhDgAWKQGEQOKA4A)
+  last-modified (1571394655085)
+}

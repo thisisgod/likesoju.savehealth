@@ -1,3 +1,8 @@
+train (t-9f4m3w6tsv53e5qpqdn12qfjq) {
+  utterance ("[g:ReturnAction4] (도라지)[v:FoodName]가 어디에 {[g:Request] (안 좋은)[v:Request:Harmful]} 지 알려줘")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4AsCwMjAxMDM5BmALIYgSxGBhDgAWKQGEQOKA4A)
+  last-modified (1571393814622)
+}
 train (t-9p7zsm67g56p1325wpnve8xc8) {
   utterance ("[g:Action4] 다음결과 (3)[v:Index]번째 부터 보여줘")
   plan (Y2BhUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2GQxqYEJimDTdItPz/FLzE3lUESm6xnXkpqBQMzAyMDE5BkANIgCAFMQBZQDAA=)

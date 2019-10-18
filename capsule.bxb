@@ -1,5 +1,5 @@
 capsule {
-  id (likesoju.savehealth)
+  id (likesoju.testcapsule)
   version (0.1.0)
   format (3)
   targets {

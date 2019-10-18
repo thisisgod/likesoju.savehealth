@@ -3,11 +3,14 @@ capsule-info {
   developer-name (LikeSoju)
   icon-asset (images/saveHealth.png)
   description ("음식의 효능과 건강에 좋은 식재료를 알려주는 서비스 입니다. 신체에 좋은 식재료와 그 식재료로 만들 수 있는 음식 레시피를 알 수 있어요!")
-  website-url (https://github.com/thisisgod/Bixby_Project)
-  terms-url (https://github.com/thisisgod/Bixby_Project)
-  dispatch-name (건강챙겨)//사용자가 부르는 캡슐의 이름
+  website-url (https://github.com/thisisgod/likesoju.savehealth)
+  terms-url (https://github.com/thisisgod/likesoju.savehealth)
+  dispatch-name (건강 챙겨)//사용자가 부르는 캡슐의 이름
   dispatch-aliases {
-    //alias (건강챙겨)//사용자가 부르는 캡슐의 별칭
+    alias (건강챙겨에서)//사용자가 부르는 캡슐의 별칭
+    alias (건강 챙겨에서)//사용자가 부르는 캡슐의 별칭
+    alias (건강 챙겨 에서)//사용자가 부르는 캡슐의 별칭
+    alias (건강챙겨)//사용자가 부르는 캡슐의 별칭
   }
   search-keywords{
     keyword (건강챙겨)//마켓플레이스에서의 검색 키워드

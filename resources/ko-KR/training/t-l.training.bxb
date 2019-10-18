@@ -1,5 +1,5 @@
 train (t-ln8kd33l4naxo07onynd39wdz) {
-  utterance ("[g:ReturnAction3] (도라지)[v:FoodName]가 (피부)[v:BodyName]에 (좋은)[v:Request:Good] 지 (알려줘)[v:SearchKeyword:검색]")
-  plan (Y2BjUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSXYHRacmliUnOGdWlmeX5TCwMrAyMDEwMzAAmQxANkwiAAgcbgKAA==)
-  last-modified (1571124936329)
+  utterance ("[g:ReturnAction3] (도라지)[v:FoodName]가 (피부)[v:BodyName]에 (좋은지)[v:Request:Good] 알려줘")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571389920101)
 }

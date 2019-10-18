@@ -17,26 +17,26 @@ action (Action4) {
     }
     input (request){
       type (Request)
-      min (Optional) max (One)
+      min (Required) max (One)
       default-init{
         intent{
           goal: Request(Good)
         }
       }
     }
-    input (requestKeyword){
-      type (RequestKeyword)
-      min (Optional) max (One)
-    }
-    input (searchKeyword){
-      type(SearchKeyword)
-      min (Optional) max (One)
-      default-init{
-        intent{
-          goal: SearchKeyword(검색)
-        }
-      }
-    }
+    // input (requestKeyword){
+    //   type (RequestKeyword)
+    //   min (Optional) max (One)
+    // }
+    // input (searchKeyword){
+    //   type(SearchKeyword)
+    //   min (Optional) max (One)
+    //   default-init{
+    //     intent{
+    //       goal: SearchKeyword(검색)
+    //     }
+    //   }
+    // }
   }
   output (ReturnAction4){
     throws{
