@@ -1,0 +1,5 @@
+train (t-5eqm7l209oo43w5jno75sivdz) {
+  utterance ("[g:ReturnAction3] (알로에)[v:FoodName]가 (임신)[v:BodyName]에 (안 좋아)[v:Request:Harmful]")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571472964977)
+}

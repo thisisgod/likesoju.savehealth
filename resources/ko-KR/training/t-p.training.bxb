@@ -1,0 +1,5 @@
+train (t-pmncphkgfswmnlkstjg9rvo8i) {
+  utterance ("[g:ReturnAction4] (생강)[v:FoodName]이 (좋은)[v:Request:Good] 곳이 있었나?")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571469451641)
+}

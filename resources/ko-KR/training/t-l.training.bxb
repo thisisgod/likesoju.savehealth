@@ -1,5 +1,15 @@
+train (t-l4ps3jil5edfoh6ywr7snmw67) {
+  utterance ("[g:ReturnAction4] (오징어)[v:FoodName]는 어디에 (나빠)[v:Request:Harmful]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571469877169)
+}
+train (t-lkwauqb7fo1k3mx7i1j9tnv71) {
+  utterance ("[g:ReturnAction1] (피로)[v:BodyName]에 (좋은)[v:Request:Good] 게 뭐야")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571469064954)
+}
 train (t-ln8kd33l4naxo07onynd39wdz) {
   utterance ("[g:ReturnAction3] (도라지)[v:FoodName]가 (피부)[v:BodyName]에 (좋은지)[v:Request:Good] 알려줘")
   plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
-  last-modified (1571389920101)
+  last-modified (1571470255481)
 }

@@ -1,0 +1,5 @@
+train (t-bb15b3nq8hvdmlfzltnu5uzpb) {
+  utterance ("[g:ReturnAction1] (감기)[v:BodyName]에는 뭐가 (나빠)[v:Request:Harmful]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571469976594)
+}

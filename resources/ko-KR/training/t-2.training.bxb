@@ -1,0 +1,15 @@
+train (t-21drpomptuod4po8tnz1w8bi7) {
+  utterance ("[g:ReturnAction3] (귀리)[v:FoodName]가 (뼈)[v:BodyName]에 (안 좋은지)[v:Request:Harmful] 확인해줘")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571472963652)
+}
+train (t-27rvqcfx26q7gsz9rnlbbtkvl) {
+  utterance ("[g:ReturnAction1] (변비)[v:BodyName]에 아 이건 먹으면 (안 된다)[v:Request:Harmful] 하는게 뭐 있을까")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571469453928)
+}
+train (t-2t51dfkgio6hblek8en10gsv1) {
+  utterance ("[g:ReturnAction4] (당근)[v:FoodName]이 어디에 (좋을까)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571469535950)
+}
