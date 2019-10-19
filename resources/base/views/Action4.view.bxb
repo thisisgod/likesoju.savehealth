@@ -4,30 +4,24 @@ result-view{
   }
 
   message{  //다이얼
-    template ("#{value(this.foodName)}이(가) 영향을 주는 부위입니다. ")
+    if(!this.harmful){
+      template ("#{value(this.foodName)}이(가) 효과 있는 부위입니다.")
+    }
+    else{
+      template ("#{value(this.foodName)}이(가) 부작용 있는 부위입니다.")
+    }
   }
 
   render{   //레이아웃
-    if (size(this) > 1) {   //여러개 일 때 리스트로 보여줌
-      list-of (this) {
-        //has-details (true)
-        where-each (item) {
-          layout-macro (list-body-about-food) {
-            param (returnAction4) {
-              expression (item)
-            }
-          }
-        }
-      }
-    } else-if (size(this) == 1) { //하나일 때or선택했을 때 상세 화면으로 보여줌
-      //layout-match (this) {
-      //  mode (Details)
-      //}
-      layout-macro (detail-body-about-food){
+    if (size(this) >= 1) {   //여러개 일 때 메인 이미지와 리스트를 보여줌
+      layout-macro (show-body-list){
         param (returnAction4){
           expression (this)
         }
       }
+    }
+    else{
+      
     }
   }
 

@@ -8,7 +8,7 @@ layout-macro-def (detail-food-about-body) { //액션 4에 대한 결과
   content {
     section {
       content {
-        image("./images/#{value(returnAction1.mainImage)}.png")
+        image("#{value(returnAction1.mainImage)}")
         title-area {
           halign (Center)
           slot1 {
@@ -25,26 +25,26 @@ layout-macro-def (detail-food-about-body) { //액션 4에 대한 결과
         if(size(returnAction1.recipe)>0){
           single-line{
             text{
-              value("#{value(returnAction1.foodName)} 음식")
+              value("#{value(returnAction1.foodName)} 관련 음식 레시피")
               style(Title_S)
             }
           }
-              for-each (returnAction1.recipe){
-                as (item){
-                  layout-macro (list-recipe){
-                    param (recipe){
-                      expression (item)
-                    }
-                  }
-                  attribution-link{
-                    label{
-                      template ("#{value(item.recipeName)} 레시피 보기")
-                    }
-                    url("#{value(item.recipeURL)}")
-                  }
+          for-each (returnAction1.recipe){
+            as (item){
+              layout-macro (list-recipe){
+                param (recipe){
+                  expression (item)
                 }
               }
+              attribution-link{
+                label{
+                  template ("#{value(item.recipeName)} 레시피 보기")
+                }
+                url("#{value(item.recipeURL)}")
+              }
             }
+          }
+        }
       }
     }
   }

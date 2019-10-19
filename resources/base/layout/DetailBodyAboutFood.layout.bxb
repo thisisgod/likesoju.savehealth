@@ -11,7 +11,7 @@ layout-macro-def (detail-body-about-food) { //액션 4에 대한 결과
         //image-carousel {
         //  images (returnAction4.images)
         //}
-        image("./images/#{value(returnAction4.mainImage)}.png")
+        //image("#{value(returnAction4.mainImage)}")
         title-area {
           halign (Center)
           slot1 {

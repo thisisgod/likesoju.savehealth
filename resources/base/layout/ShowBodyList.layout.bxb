@@ -1,0 +1,34 @@
+layout-macro-def (show-body-list) { //액션 4에 대한 결과
+  params {
+    param (returnAction4) {
+      type (ReturnAction4)
+      min (Required) max (Many)
+    }
+  }
+  content {
+    section {
+      content {
+        image("#{value(returnAction4.mainImage)}")
+
+        for-each (returnAction4){
+          as (item){
+            title-area {
+              halign (Start)
+              slot1 {
+                text {
+                  value ("#{value(item.bodyName)}")
+                  style (Title_S)
+                }
+              }
+            }
+            paragraph {
+              value ("#{value(item.foodDescription)}")
+              style (Detail_M_Soft)
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
