@@ -126,7 +126,7 @@ exports.searchAction1_harmful = function (bodyName, startIdx) {
     let returnObj = new Object();
     returnObj.id = j + startIdx;
     returnObj.bodyName = data[i].bodyName;
-    returnObj.description = data[i].description;
+    returnObj.foodDescription = data[i].foodDescription;
     returnObj.foodName = data[i].foodName;
     returnObj.harmful = harmful;
     returnAction1.push(returnObj);
@@ -160,7 +160,7 @@ exports.searchAction4_harmful = function (foodName, startIdx) {
     let returnObj = new Object();
     returnObj.id = j + startIdx;
     returnObj.bodyName = data[i].bodyName;
-    returnObj.description = data[i].description;
+    returnObj.foodDescription = data[i].foodDescription;
     returnObj.foodName = data[i].foodName;
     returnObj.harmful = harmful;
     returnAction4.push(returnObj);
