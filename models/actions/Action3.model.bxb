@@ -14,15 +14,6 @@ action (Action3) {
       type(Request)
       min (Required) max (One)
     }
-    input (searchKeyword){
-      type(SearchKeyword)
-      min (Optional) max (One)
-      default-init{
-        intent{
-          goal: SearchKeyword(검색)
-        }
-      }
-    }
   }
   output (ReturnAction3){
     throws{

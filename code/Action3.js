@@ -1,4 +1,4 @@
-module.exports.function = function action3(foodName, bodyName, searchKeyword, request) {
+module.exports.function = function action3(foodName, bodyName, request) {
   const console = require('console');
   const config = require('config');
   const http = require('http');

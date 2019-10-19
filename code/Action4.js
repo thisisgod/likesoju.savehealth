@@ -1,4 +1,4 @@
-module.exports.function = function action4(foodName, startIdx, request, requestKeyword, searchKeyword) {
+module.exports.function = function action4(foodName, startIdx, request) {
   let returnAction4 = new Object();
   const search = require('./lib/SearchAction.js');
   if (request == "Good") {

@@ -19,19 +19,6 @@ action (Action1) {
         }
       }
     }
-    // input (requestKeyword){
-    //   type (RequestKeyword)
-    //   min (Required) max (One)
-    // }
-    // input (searchKeyword){
-    //   type(SearchKeyword)
-    //   min (Optional) max (One)
-    //   default-init{
-    //     intent{
-    //       goal: SearchKeyword(검색)
-    //     }
-    //   }
-    // }
   }
   output (ReturnAction1){
     throws{

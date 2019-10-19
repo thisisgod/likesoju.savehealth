@@ -1,5 +1,5 @@
 train (t-6f70jdttav7alfytmvytvfsyq) {
   utterance ("[g:ReturnAction4] (배추)[v:FoodName]의 (효능)[v:Request:Good] 알려줘")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571394904542)
+  last-modified (1571395707185)
 }
