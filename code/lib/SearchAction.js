@@ -304,6 +304,7 @@ exports.searchAction1_harmful = function (bodyName, startIdx) {
     returnObj.foodDescription = data[i].foodDescription;
     returnObj.foodName = data[i].foodName;
     returnObj.harmful = harmful;
+    returnObj.mainImage = data[i].mainImage;
     returnAction1.push(returnObj);
     delete returnObj;
     j++;
