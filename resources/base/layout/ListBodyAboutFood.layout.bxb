@@ -19,7 +19,7 @@ layout-macro-def (list-body-about-food) { //액션4에 대한 결과
           paragraph{
             //text {
               value ("#{value(returnAction4.foodDescription)}")
-              style(Detail_L_Soft)
+              style(Detail_L)
             //}
           }
         }
