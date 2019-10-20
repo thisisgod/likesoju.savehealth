@@ -1,7 +1,7 @@
 train (t-j45onm9n8typks4xsikqasc5y) {
-  utterance ("[g:ReturnAction3] (마늘)[v:FoodName]이 (피로)[v:BodyName]에 (좋니)[v:Request:Good]")
+  utterance ("[g:ReturnAction3] (마늘)[v:FoodName]이 (피로회복)[v:BodyName]에 (좋니)[v:Request:Good]")
   plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
-  last-modified (1571472413125)
+  last-modified (1571595251525)
 }
 train (t-jf3ii6j9ktha1cuww826i8sdf) {
   utterance ("[g:ReturnAction3] (빈혈)[v:BodyName]에는 (땅콩)[v:FoodName] 먹어도 (되)[v:Request:Good]")

@@ -1,5 +1,5 @@
 train (t-rwxnapz0f6buk0ct5frtsiznz) {
-  utterance ("[g:ReturnAction3] (심근경색 예방)[v:BodyName]에 (호박)[v:FoodName]이 (좋을지)[v:Request:Good] 검색해줘")
+  utterance ("[g:ReturnAction3] (심근경색)[v:BodyName]에 (호박)[v:FoodName]이 (좋을지)[v:Request:Good] 검색해줘")
   plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
-  last-modified (1571472420766)
+  last-modified (1571596410726)
 }

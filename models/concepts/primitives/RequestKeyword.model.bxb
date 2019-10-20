@@ -1,5 +1,0 @@
-enum (RequestKeyword) {
-  description (음식을 요구하는 발화인지 부위를 요구하는 발화인지 구분하는 Enum)
-  symbol (Food)
-  symbol (Body)
-}

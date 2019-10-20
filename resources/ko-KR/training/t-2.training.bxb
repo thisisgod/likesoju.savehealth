@@ -8,6 +8,11 @@ train (t-27rvqcfx26q7gsz9rnlbbtkvl) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571469453928)
 }
+train (t-2nw9izzxh7p95c190od64jlf1) {
+  utterance ("[g:ReturnAction4] (마늘)[v:FoodName]이 어디에 (좋아)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571594059938)
+}
 train (t-2t51dfkgio6hblek8en10gsv1) {
   utterance ("[g:ReturnAction4] (당근)[v:FoodName]이 어디에 (좋을까)[v:Request:Good]")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)

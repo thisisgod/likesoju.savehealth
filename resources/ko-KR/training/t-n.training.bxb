@@ -1,5 +1,0 @@
-train (t-nals8m8kugjgwnpncg1h9fvy7) {
-  utterance ("[g:ReturnAction3] (감기)[v:BodyName] 걸렸을때 (우유)[v:FoodName] 먹으면 (안되)[v:Request:Harmful]")
-  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
-  last-modified (1571473619579)
-}

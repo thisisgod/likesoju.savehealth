@@ -3,3 +3,8 @@ train (t-kaf1j2ipfqw0xrmj2arguua2o) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571588680845)
 }
+train (t-korojd9ugqdr1jjb93xgwblme) {
+  utterance ("[g:ReturnAction4] (마늘)[v:FoodName]이 (안 좋은)[v:Request:Harmful] 곳이 어디야")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571593485813)
+}
