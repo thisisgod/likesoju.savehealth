@@ -14,19 +14,19 @@ layout-macro-def (detail-food-about-body) { //액션 4에 대한 결과
           slot1 {
             text {
               value ("#{value(returnAction1.foodName)}")
-              style (Title_M)
+              style (Title_S)
             }
           }
         }
         paragraph {
           value ("#{value(returnAction1.foodDescription)}")
-          style (Detail_M_Soft)
+          style (Detail_M)
         }
         if(size(returnAction1.recipe)>0){
           single-line{
             text{
               value("#{value(returnAction1.foodName)} 관련 음식 레시피")
-              style(Title_S)
+              style(Legal)
             }
           }
           for-each (returnAction1.recipe){
