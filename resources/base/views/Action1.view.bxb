@@ -4,12 +4,17 @@ result-view{
   }
 
   message{  //다이얼
-    if(!this.harmful){
-      template ("#{value(this.bodyName)}에 좋은 음식들입니다.")
-    }
-    else{
-      template ("#{value(this.bodyName)}에 나쁜 음식들입니다.")
-    }
+    //if(size(this)>0){
+      if(!this.harmful){
+        template ("#{value(this.bodyName)}에 좋은 음식입니다.")
+      }
+      else{
+        template ("#{value(this.bodyName)}에 나쁜 음식입니다.")
+      }
+    //}
+    //else{
+    //  template ("#{value(this.bodyName)}에 대한 정보가 부족해요.")
+    //}
   }
 
   render{   //레이아웃
@@ -32,11 +37,42 @@ result-view{
         }
       }
     }
+    else{
+      layout{
+        section{
+          content{
+            paragraph{
+              style(Title_S)  //이메일로 연락달라하기
+              value("이런! 제가 모르는 정보예요.")
+            }
+            paragraph{
+              style(Detail_L)
+              value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 알려주실래요?")
+            }
+            attribution-link{
+              label{
+                template ("건강챙겨에게 찾지 못한 정보 알려주기")
+              }
+               url("https://github.com/thisisgod/likesoju.savehealth")
+            }
+            paragraph{
+              style(Detail_L)
+              value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
+            }
+          }
+        }
+      }
+    }
   }
 
   conversation-drivers{ //hint
     conversation-driver{
-      template ("")
+      if(!this.harmful){
+        //template ("#{value(this.bodyName)}에 나쁜 음식이 뭐야?")
+      }
+      else{
+        //template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
+      }
     }
   }
 }
