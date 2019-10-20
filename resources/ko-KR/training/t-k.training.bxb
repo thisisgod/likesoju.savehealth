@@ -1,5 +1,5 @@
 train (t-kaf1j2ipfqw0xrmj2arguua2o) {
-  utterance ("[g:ReturnAction1] (혈액순환)[v:BodyName]에 {[g:Request] (안 좋은)[v:Request:Harmful]} 게 뭔지 알아")
-  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4AsCwMjAxMDM5BmALIYgSxGBhDgAWKQGEQOKA4A)
-  last-modified (1571463424581)
+  utterance ("[g:ReturnAction1] (혈액순환)[v:BodyName]에 (안 좋은)[v:Request:Harmful] 게 뭔지 알아")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571588680845)
 }

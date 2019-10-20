@@ -1,5 +1,5 @@
 train (t-88krzg33mhn4b65k1h8j12u2s) {
   utterance ("[g:ReturnAction1] (눈)[v:BodyName]에 (좋은)[v:Request:Good] 음식 알려줘")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571389832453)
+  last-modified (1571588519627)
 }

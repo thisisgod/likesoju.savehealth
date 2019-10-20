@@ -1,0 +1,5 @@
+train (t-mb19kx9f4hjxnstij0yfh802x) {
+  utterance ("[g:ReturnAction1] (감기)[v:BodyName]에 (나쁜)[v:Request:Harmful] 음식 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571589312109)
+}

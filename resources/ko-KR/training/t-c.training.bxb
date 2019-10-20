@@ -3,8 +3,3 @@ train (t-c1by6elxrfu7uqkmni46m2y4c) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571469416505)
 }
-train (t-c9ruj13n9ijddv1azy32144ci) {
-  utterance ("[g:ReturnAction3] (아몬드)[v:FoodName]는 (장)[v:BodyName]에 좋아")
-  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAaYgRgkxwAA)
-  last-modified (1571470444424)
-}

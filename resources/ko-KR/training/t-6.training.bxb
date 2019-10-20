@@ -3,8 +3,3 @@ train (t-6f70jdttav7alfytmvytvfsyq) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571395707185)
 }
-train (t-6wxawqct42h7jbpym9gfor4yt) {
-  utterance ("[g:ReturnAction1] (폐)[v:BodyName]에는 뭐가 (안 좋아)[v:Request:Harmful]")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571470023928)
-}
