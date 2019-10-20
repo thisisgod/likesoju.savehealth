@@ -4,7 +4,15 @@ result-view{
   }
 
   message{  //다이얼
-    template ("#{value(this.answer)}")
+    if(this.isFind){
+      template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 좋은 음식입니다.")
+    }
+    else-if(!this.isFind&&this.infoJudge){
+      template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 나쁜 음식입니다.")
+    }
+    //else{
+    //  template ("#{value(this.foodName)}와(과) #{value(this.bodyName)}에 대해 찾아봤습니다.")
+    //}
   }
 
   render{ //레이아웃
@@ -16,34 +24,58 @@ result-view{
               halign (Start)
               slot1{
                 text{
-                  style(Title_S)
+                  style(Legal)
                   value("설명")
                 }
               }
             }
             paragraph{
-              style(Detail_L_Soft)
+              style(Detail_L)
               value("#{value(this.foodDescription)}")
             }
-            //if(!this.isFind){
-              //나쁠 때
-            //}
           }
         }
-        
       }
     }
     else{
       layout{
         section{
           content{
-            single-line{
-              text{
-                value("#{value(this.bodyName)}에 좋은 음식")
-                style(Title_S)
+            paragraph{
+              style(Title_S)  //이메일로 연락달라하기
+              value("이런! #{value(this.foodName)}, #{value(this.bodyName)} 둘 사이에 관한 정보가 없어요.")
+            }
+            paragraph{
+              style(Detail_L)
+              value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 알려주실래요?")
+            }
+            attribution-link{
+              label{
+                template ("건강챙겨에게 찾지 못한 정보 알려주기")
+              }
+              url("https://github.com/thisisgod/likesoju.savehealth")
+            }
+            paragraph{
+              style(Detail_L)
+              value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
+            }
+            if(size(this.returnAction1)>0||size(this.returnAction4)>0){
+              paragraph{
+                style(Detail_L)
+                value("대신 제가 알고 있는 이런 정보는 어때요?")
+              }
+              paragraph{
+                style(Detail_L)
+                value("")
               }
             }
-            if(size(this.returnAction1)>1){
+            if(size(this.returnAction1)>0){
+              single-line{
+                text{
+                  value("#{value(this.bodyName)}에 좋은 음식")
+                  style(Legal)
+                }
+              }
               for-each (this.returnAction1){
                 as (item){
                   layout-macro (list-food-card) {
@@ -54,41 +86,31 @@ result-view{
                 }
               }
             }
-            //else{
-
-            //}
-            single-line{
-              text{
-                value("#{value(this.foodName)}의 효능")
-                style(Title_S)
+            if(size(this.returnAction4)>0){
+              single-line{
+                text{
+                  value("#{value(this.foodName)}의 효능")
+                  style(Legal)
+                }
               }
-            }
-            if(size(this.returnAction4)>1){
               for-each (this.returnAction4){
                 as (item){
-                  title-card{
-                    title-area {
-                      halign (Start)
-                      slot1 {
-                        text {
-                          value ("#{value(item.bodyName)}")
-                          style (Title_S)
-                        }
-                      }
-                      slot2 {
-                        paragraph{
-                          value("#{value(item.foodDescription)}")
-                          style(Detail_M_Soft)
-                        }
+                  title-area {
+                    halign (Start)
+                    slot1 {
+                      text {
+                        value ("#{value(item.bodyName)}")
+                        style (Title_S)
                       }
                     }
+                  }
+                  paragraph{
+                    value("#{value(item.foodDescription)}")
+                    style(Detail_M)
                   }
                 }
               }
             }
-            //else{
-              
-            //}
           }
         }
       }
@@ -97,7 +119,14 @@ result-view{
 
   conversation-drivers{
     conversation-driver{
-      template ("")
+      if(this.isFind){
+        //template ("#{value(this.foodName)}이(가) 어디에 좋아?")
+        //template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
+      }
+      else-if (!this.isFind&&this.infoJudge){
+        //template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
+        //template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
+      }
     }
   }
 }
