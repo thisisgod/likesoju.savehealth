@@ -11,7 +11,8 @@ exports.searchAction1 = function (bodyName, startIdx) {
   let response = http.getUrl(config.get('remote.url') + '/food', options);
 
   let data = response;
-  let isFind = new Boolean();
+  let isFind = false;
+  console.log(isFind);
   let returnAction1 = new Array();
   if (response.length < 1) {
     let returnObj = new Object();
@@ -21,12 +22,14 @@ exports.searchAction1 = function (bodyName, startIdx) {
     returnObj.bodyName = bodyName;
     returnObj.foodName = foodName+"에 대한 정보가 없어요";
     returnObj.isFind = isFind;
+    console.log("isFind == "+returnObj.isFind);
     returnAction1.push(returnObj);
     console.log(returnAction1);
     return returnAction1;
   }
   else {
     isFind = true
+    console.log("isFind == "+isFind);
     let index = startIdx - 1;
     let harmful = false;
     let i, j = 0, k = 0;
@@ -40,6 +43,7 @@ exports.searchAction1 = function (bodyName, startIdx) {
       returnObj.foodName = data[i].foodName;
       returnObj.mainImage = data[i].mainImage;
       returnObj.isFind = isFind;
+      console.log("isFind == "+returnObj.isFind);
       returnObj.harmful = harmful;
       let recipeOptions = {
         format: 'json',
@@ -65,6 +69,9 @@ exports.searchAction1 = function (bodyName, startIdx) {
     }
     for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
     console.log(returnAction1);
+    console.log("isFind == "+returnAction1[0].isFind);
+    console.log("isFind == "+returnAction1[1].isFind);
+    console.log("isFind == "+returnAction1[2].isFind);
     return returnAction1;
   }
 }
