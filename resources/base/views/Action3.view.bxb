@@ -1,39 +1,27 @@
 result-view{
-  match : ReturnAction3(this){
-    from-output:Action3
+  match : ReturnAction4(this){
+    from-output:Action4
   }
 
   message{  //다이얼
-    if(this.isFind){
-      template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 좋은 음식입니다.")
-    }
-    else-if(!this.isFind&&this.infoJudge){
-      template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 나쁜 음식입니다.")
-    }
+    //if(size(this)>0){
+      if(!this.harmful){
+        template ("#{value(this.foodName)}이(가) 효과 있는 신체 부위입니다.")
+      }
+      else{
+        template ("#{value(this.foodName)}이(가) 부작용 있는 신체 부위입니다.")
+      }
+    //}
     //else{
-    //  template ("#{value(this.foodName)}와(과) #{value(this.bodyName)}에 대해 찾아봤습니다.")
+    //  template ("#{value(this.foodName)}은(는) 제가 알지 못하는 정보예요.")
     //}
   }
 
-  render{ //레이아웃
-    if(this.infoJudge){
-      layout{
-        section{
-          content{
-            title-area{
-              halign (Start)
-              slot1{
-                text{
-                  style(Legal)
-                  value("설명")
-                }
-              }
-            }
-            paragraph{
-              style(Detail_L)
-              value("#{value(this.foodDescription)}")
-            }
-          }
+  render{   //레이아웃
+    if (size(this) > 0) {   //여러개 일 때 메인 이미지와 리스트를 보여줌
+      layout-macro (show-body-list){
+        param (returnAction4){
+          expression (this)
         }
       }
     }
@@ -41,87 +29,23 @@ result-view{
       layout{
         section{
           content{
-            title-area{
-              halign (Start)
-              slot1{
-                text{
-                  style(Legal)
-                  value("설명")
-                }
-              }
-            }
             paragraph{
               style(Detail_L)  //이메일로 연락달라하기
-              value("#{value(this.foodName)}는 #{value(this.bodyName)}에 대해 알려진 효과가 없어요.")
+              value("이런! #{value(this.bodyName)}에 대한 정보가 없어요.")
             }
             paragraph{
-              style(Detail_M)
-              value("혹시 제가 잘못 알고 있다면 더 똑똑해질 건강챙겨를 위해 알려주실래요?")
+              style(Detail_M)  //이메일로 연락달라하기
+              value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 알려주실래요?")
             }
             attribution-link{
               label{
                 template ("건강챙겨에게 찾지 못한 정보 알려주기")
               }
-              url("https://github.com/thisisgod/likesoju.savehealth")
+               url("https://github.com/thisisgod/likesoju.savehealth")
             }
             paragraph{
-              style(Detail_M)
+              style(Detail_M)  //이메일로 연락달라하기
               value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
-            }
-            if(size(this.returnAction1)>0||size(this.returnAction4)>0){
-              paragraph{
-                style(Detail_M)
-                value("이것 말고도 제가 알고 있는 이런 정보는 어때요?")
-              }
-              paragraph{
-                style(Detail_M)
-                value(" ")
-              }
-            }
-            if(size(this.returnAction1)>0){
-              title-area{
-                halign (End)
-                slot1{
-                  text{
-                    value("#{value(this.bodyName)}에 좋은 음식")
-                    style(Detail_L_Soft)
-                  }
-                }
-              }
-              for-each (this.returnAction1){
-                as (item){
-                  layout-macro (list-food-card) {
-                    param (returnAction1) {
-                      expression (item)
-                    }
-                  }
-                }
-              }
-            }
-            if(size(this.returnAction4)>0){
-              title-area{
-                halign (End)
-                slot1{
-                  text{
-                    value("#{value(this.foodName)}의 효능")
-                    style(Detail_L_Soft)
-                  }
-                }
-              }
-              for-each (this.returnAction4){
-                as (item){
-                  single-line{
-                    text{
-                      value("#{value(item.bodyName)}")
-                      style(Title_S)
-                    }
-                  }
-                  paragraph{
-                    value("#{value(item.foodDescription)}")
-                    style(Detail_M)
-                  }
-                }
-              }
             }
           }
         }
@@ -129,16 +53,9 @@ result-view{
     }
   }
 
-  //conversation-drivers{
+  //conversation-drivers{ //hint
     //conversation-driver{
-      //if(this.isFind){
-        //template ("#{value(this.foodName)}이(가) 어디에 좋아?")
-        //template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
-      //}
-      //else-if (!this.isFind&&this.infoJudge){
-        //template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
-        //template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
-      //}
+      //template ("다음 결과 #{value(this.index)}번째 부터 보여줘")
     //}
   //}
 }
