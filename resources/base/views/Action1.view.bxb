@@ -5,35 +5,38 @@ result-view{
 
   message{  //다이얼
     //if(size(this)>0){
-      if(!this.harmful){
-        template ("#{value(this.bodyName)}에 좋은 음식입니다.")
+      if(this.isFind){
+        if(!this.harmful){
+          template ("#{value(this.bodyName)}에 좋은 음식입니다.")
+        }
+        else{
+          template ("#{value(this.bodyName)}에 나쁜 음식입니다.")
+        }
       }
       else{
-        template ("#{value(this.bodyName)}에 나쁜 음식입니다.")
+        template ("#{value(this.bodyName)}에 대한 정보가 없어요.")
       }
-    //}
-    //else{
-    //  template ("#{value(this.bodyName)}에 대한 정보가 부족해요.")
-    //}
   }
 
   render{   //레이아웃
-    if (size(this) > 1) {   //여러개 일 때 리스트로 보여줌
-      list-of (this) {
-        //has-details (true)
-        where-each (item) {
-          layout-macro (list-food-card) {
-            param (returnAction1) {
-              expression (item)
+    if(this.isFind){
+      if (size(this) > 1) {   //여러개 일 때 리스트로 보여줌
+        list-of (this) {
+          //has-details (true)
+          where-each (item) {
+            layout-macro (list-food-card) {
+              param (returnAction1) {
+                expression (item)
+              }
             }
           }
         }
-      }
-    } 
-    else-if (size(this) == 1) { //하나일 때or선택했을 때 상세 화면으로 보여줌
-      layout-macro (detail-food-about-body){
-        param (returnAction1){
-          expression (this)
+      } 
+      else-if (size(this) == 1) { //하나일 때or선택했을 때 상세 화면으로 보여줌
+        layout-macro (detail-food-about-body){
+          param (returnAction1){
+            expression (this)
+          }
         }
       }
     }
@@ -41,10 +44,7 @@ result-view{
       layout{
         section{
           content{
-            paragraph{
-              style(Detail_L)  //이메일로 연락달라하기
-              value("이런! 제가 모르는 정보예요.")
-            }
+
             paragraph{
               style(Detail_M)
               value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 아래의 이메일로 보내주실래요?")
@@ -65,12 +65,14 @@ result-view{
 
   conversation-drivers{ //hint
     conversation-driver{
-      if(!this.harmful){
-        template ("#{value(this.bodyName)}에 나쁜 음식이 뭐야?")
-      }
-      else{
-        template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
-      }
+      //if(this.isFind){
+        if(!this.harmful){
+          template ("#{value(this.bodyName)}에 나쁜 음식이 뭐야?")
+        }
+        else{
+          template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
+        }
+      //}
     }
   }
 }
