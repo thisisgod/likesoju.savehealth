@@ -34,17 +34,15 @@ result-view{
               value("이런! #{value(this.bodyName)}에 대한 정보가 없어요.")
             }
             paragraph{
-              style(Detail_M)  //이메일로 연락달라하기
-              value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 알려주실래요?")
-            }
-            attribution-link{
-              label{
-                template ("건강챙겨에게 찾지 못한 정보 알려주기")
-              }
-               url("https://github.com/thisisgod/likesoju.savehealth")
+              style(Detail_M)
+              value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 아래의 이메일로 보내주실래요?")
             }
             paragraph{
-              style(Detail_M)  //이메일로 연락달라하기
+              style(Detail_M_Soft)
+              value("yeongmi7110@gmail.com")
+            }
+            paragraph{
+              style(Detail_M)
               value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
             }
           }
@@ -53,9 +51,14 @@ result-view{
     }
   }
 
-  //conversation-drivers{ //hint
-    //conversation-driver{
-      //template ("다음 결과 #{value(this.index)}번째 부터 보여줘")
-    //}
-  //}
+  conversation-drivers{ //hint
+    conversation-driver{
+      if(!this.harmful){
+        template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
+      }
+      else{
+        template ("#{value(this.foodName)}이(가) 어디에 좋아?")
+      }
+    }
+  }
 }
