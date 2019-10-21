@@ -10,9 +10,9 @@ result-view{
     else-if(!this.isFind&&this.infoJudge){
       template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 나쁜 음식입니다.")
     }
-    //else{
-    //  template ("#{value(this.foodName)}와(과) #{value(this.bodyName)}에 대해 찾아봤습니다.")
-    //}
+    else{
+      template ("#{value(this.foodName)}와(과) #{value(this.bodyName)}에 대해 찾아봤습니다.")
+    }
   }
 
   render{ //레이아웃
