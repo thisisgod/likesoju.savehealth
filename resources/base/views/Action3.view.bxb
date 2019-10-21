@@ -4,7 +4,7 @@ result-view{
   }
 
   message{  //다이얼
-    if(this.isFind){
+    if(this.isFind&&this.infoJudge){
       template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 좋은 음식입니다.")
     }
     else-if(!this.isFind&&this.infoJudge){
@@ -51,6 +51,7 @@ result-view{
                 }
               }
             }
+            
             paragraph{
               style(Detail_L)  //이메일로 연락달라하기
               value("#{value(this.foodName)}는 #{value(this.bodyName)}에 대해 알려진 효과가 없어요.")
@@ -59,14 +60,10 @@ result-view{
               style(Detail_M)
               value("혹시 제가 잘못 알고 있다면 더 똑똑해질 건강챙겨를 위해 아래의 이메일로 알려주실래요?")
             }
-            paragraph{
-              style(Detail_M_Soft)
-              value("yeongmi7110@gmail.com")
+            layout-macro (contact-used){
+              
             }
-            paragraph{
-              style(Detail_M)
-              value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
-            }
+
             if(size(this.returnAction1)>0||size(this.returnAction4)>0){
               paragraph{
                 style(Detail_M)
@@ -78,12 +75,25 @@ result-view{
               }
             }
             if(size(this.returnAction1)>0){
-              title-area{
-                halign (End)
-                slot1{
-                  text{
-                    value("#{value(this.bodyName)}에 좋은 음식")
-                    style(Detail_L_Soft)
+              if(this.returnAction1[0].harmful){
+                title-area{
+                  halign (End)
+                  slot1{
+                    text{
+                      value("#{value(this.bodyName)}에 좋은 음식")
+                      style(Detail_L_Soft)
+                    }
+                  }
+                }
+              }
+              else{
+                title-area{
+                  halign (End)
+                  slot1{
+                    text{
+                      value("#{value(this.bodyName)}에 나쁜 음식")
+                      style(Detail_L_Soft)
+                    }
                   }
                 }
               }
@@ -98,15 +108,29 @@ result-view{
               }
             }
             if(size(this.returnAction4)>0){
-              title-area{
-                halign (End)
-                slot1{
-                  text{
-                    value("#{value(this.foodName)}의 효능")
-                    style(Detail_L_Soft)
+              if(this.returnAction4[0].isFind){
+                title-area{
+                  halign (End)
+                  slot1{
+                    text{
+                      value("#{value(this.foodName)}의 효능")
+                      style(Detail_L_Soft)
+                    }
                   }
                 }
               }
+              else{
+                title-area{
+                  halign (End)
+                  slot1{
+                    text{
+                      value("#{value(this.foodName)}의 부작용")
+                      style(Detail_L_Soft)
+                    }
+                  }
+                }
+              }
+              
               for-each (this.returnAction4){
                 as (item){
                   single-line{
