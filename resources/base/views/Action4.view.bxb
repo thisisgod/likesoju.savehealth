@@ -13,7 +13,7 @@ result-view{
       }
     }
     else{
-      template ("#{value(this.foodName)}에 대한 정보가 없어요.")
+      template ("이런! #{value(this.foodName)}에 대한 정보가 없어요.")
     }
   }
 
@@ -29,21 +29,12 @@ result-view{
       layout{
         section{
           content{
-            paragraph{
-              style(Detail_L)  //이메일로 연락달라하기
-              value("이런! #{value(this.bodyName)}에 대한 정보가 없어요.")
-            }
-            paragraph{
+            paragraph{  //이메일로 연락달라하기
               style(Detail_M)
               value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 아래의 이메일로 보내주실래요?")
             }
-            paragraph{
-              style(Detail_M_Soft)
-              value("yeongmi7110@gmail.com")
-            }
-            paragraph{
-              style(Detail_M)
-              value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
+            layout-macro (contact-used){
+              
             }
           }
         }
