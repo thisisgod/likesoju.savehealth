@@ -60,8 +60,13 @@ result-view{
               style(Detail_M)
               value("혹시 제가 잘못 알고 있다면 더 똑똑해질 건강챙겨를 위해 아래의 이메일로 알려주실래요?")
             }
-            layout-macro (contact-used){
-              
+            paragraph{
+              style(Detail_M_Soft)
+              value("yeongmi7110@gmail.com")
+            }
+            paragraph{
+              style(Detail_M)
+              value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
             }
 
             if(size(this.returnAction1)>0||size(this.returnAction4)>0){
@@ -99,14 +104,33 @@ result-view{
               }
               for-each (this.returnAction1){
                 as (item){
-                  layout-macro (list-food-card) {
-                    param (returnAction1) {
-                      expression (item)
+                  compound-card {
+                    content {
+                      image-card {
+                        aspect-ratio (4:3)
+                        image-url ("#{value(item.mainImage)}")
+                        title-area {
+                          halign (End)
+                          slot1 {
+                            text {
+                                value ("#{value(item.foodName)}")
+                              style (Title_M)
+                            }
+                          }
+                        }
+                      }
                     }
                   }
+                  paragraph{
+                    value("#{value(item.foodDescription)}")
+                    style(Detail_M)
+                  }
+
                 }
               }
             }
+
+
             if(size(this.returnAction4)>0){
               if(this.returnAction4[0].isFind){
                 title-area{
