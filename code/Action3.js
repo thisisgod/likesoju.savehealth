@@ -1,350 +1,92 @@
-exports.searchAction1 = function (bodyName, startIdx) {
+module.exports.function = function action3(foodName, bodyName, request) {
   const console = require('console');
   const config = require('config');
   const http = require('http');
-  let options = {
-    format: 'json',
-    query: {
-      bodyName: bodyName
-    }
-  };
-  let response = http.getUrl(config.get('remote.url') + '/food', options);
+  const search = require('./lib/SearchAction.js');
+  let startIdx = 1;
 
-  let data = response;
-  let index = startIdx - 1;
-  let harmful = false;
-  let returnAction1 = new Array();
-  let i, j = 0, k = 0;
-
-  for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    let recipeArr = new Array();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.mainImage = data[i].mainImage;
-    returnObj.harmful = harmful;
-    let recipeOptions = {
-      format: 'json',
-      query: {
-        foodName: returnObj.foodName
-      }
-    };
-    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);
-    for (k = 0; k < recipeResponse.length; k++) {
-      let recipeObj = new Object();
-      recipeObj.recipeURL = recipeResponse[k].recipeUrl;
-      recipeObj.recipeName = recipeResponse[k].recipeName;
-      recipeObj.recipeImage = recipeResponse[k].recipeImage;
-      recipeArr.push(recipeObj);
-      delete recipeObj;
-    }
-    returnObj.recipe = recipeArr;
-    returnAction1.push(returnObj);
-    delete returnObj;
-    delete recipeArr
-    j++;
-    if (j == 3) break;
-  }exports.searchAction1 = function (bodyName, startIdx) {
-  const console = require('console');
-  const config = require('config');
-  const http = require('http');
-  let options = {
-    format: 'json',
-    query: {
-      bodyName: bodyName
-    }
-  };
-  let response = http.getUrl(config.get('remote.url') + '/food', options);
-
-  let data = response;
-  let index = startIdx - 1;
-  let harmful = false;
-  let returnAction1 = new Array();
-  let i, j = 0, k = 0;
-
-  for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    let recipeArr = new Array();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.mainImage = data[i].mainImage;
-    returnObj.harmful = harmful;
-    let recipeOptions = {
-      format: 'json',
-      query: {
-        foodName: returnObj.foodName
-      }
-    };
-    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);
-    for (k = 0; k < recipeResponse.length; k++) {
-      let recipeObj = new Object();
-      recipeObj.recipeURL = recipeResponse[k].recipeUrl;
-      recipeObj.recipeName = recipeResponse[k].recipeName;
-      recipeObj.recipeImage = recipeResponse[k].recipeImage;
-      recipeArr.push(recipeObj);
-      delete recipeObj;
-    }
-    returnObj.recipe = recipeArr;
-    returnAction1.push(returnObj);
-    delete returnObj;
-    delete recipeArr
-    j++;
-    if (j == 3) break;
-  }
-  for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-  console.log(returnAction1);
-  return returnAction1;
-}
-// ---------------------------------------------------------------------------------------------------
-exports.searchAction4 = function (foodName, startIdx) {
-  const console = require('console');
-  const config = require('config');
-  const http = require('http');
-  let options = {
+  let foodOptions = {
     format: 'json',
     query: {
       foodName: foodName
     }
   };
-  let response = http.getUrl(config.get('remote.url') + '/food', options);
+  let response = http.getUrl(config.get('remote.url') + '/food', foodOptions);
   let data = response;
-  let index = startIdx - 1;
-  let harmful = false;
-  let returnAction4 = new Array();
-  let i, j = 0, k = 0;
-
+  let i, checkIdx;
+  let infoJudge = new Boolean();
+  let returnAction3 = new Object();
+  let isFind = false;
   for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    let recipeArr = new Array();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.mainImage = data[i].mainImage;
-    returnObj.harmful = harmful;
+    if (data[i].bodyName == String(bodyName)) {
+      isFind = true;
+      checkIdx = i;
+    }
+  }
 
+  returnAction3.foodName = foodName;
+  returnAction3.bodyName = bodyName;
+  returnAction3.mainImage = data[checkIdx].mainImage;
+  returnAction3.isFind = isFind;
+
+  if (isFind === true) {
     let recipeOptions = {
       format: 'json',
       query: {
         foodName: foodName
       }
     };
-    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', options);
-    for (k = 0; k < recipeResponse.length; k++) {
+    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', recipeOptions);
+    let recipeArr = new Array();
+    let j;
+    for (j = 0; j < recipeResponse.length; j++) {
       let recipeObj = new Object();
-      recipeObj.recipeURL = recipeResponse[k].recipeUrl;
-      recipeObj.recipeName = recipeResponse[k].recipeName;
-      recipeObj.recipeImage = recipeResponse[k].recipeImage;
+      recipeObj.recipeURL = recipeResponse[j].recipeUrl;
+      recipeObj.recipeName = recipeResponse[j].recipeName;
+      recipeObj.recipeImage = recipeResponse[j].recipeImage;
       recipeArr.push(recipeObj);
       delete recipeObj;
     }
-    returnObj.recipe = recipeArr;
-    returnAction4.push(returnObj);
-    delete returnObj;
-    delete recipeArr
-    j++;
-    if (j == 3) break;
-  }
-  for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
-  console.log(returnAction4);
-  return returnAction4;
-}
-exports.searchAction1_harmful = function (bodyName, startIdx) {
-  const console = require('console');
-  const config = require('config');
-  const http = require('http');
-  let options = {
-    format: 'json',
-    query: {
-      bodyName: bodyName
-    }
-  };
-  let response = http.getUrl(config.get('remote.url') + '/harmful', options);
-  let data = response;
-  let index = startIdx - 1;
-  let returnAction1 = new Array();
-  let harmful = true;
-  let i, j = 0;
-
-  for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.harmful = harmful;
-    returnObj.mainImage = data[i].mainImage;
-    returnAction1.push(returnObj);
-    delete returnObj;
-    j++;
-    if (j == 3) break;
-  }
-  for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-  console.log(returnAction1);
-  return returnAction1;
-
-}
-exports.searchAction4_harmful = function (foodName, startIdx) {
-  const console = require('console');
-  const config = require('config');
-  const http = require('http');
-  let options = {
-    format: 'json',
-    query: {
-      foodName: foodName
-    }
-  };
-  let response = http.getUrl(config.get('remote.url') + '/harmful', options);
-  let data = response;
-  let index = startIdx - 1;
-  let returnAction4 = new Array();
-  let harmful = true;
-  let i, j = 0;
-
-  for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodName = data[i].foodName;
-    returnObj.harmful = harmful;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnAction4.push(returnObj);
-    delete returnObj;
-    j++;
-    if (j == 3) break;
-  }
-  for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
-  console.log(returnAction4);
-  return returnAction4;
-}
-
-  for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-  console.log(returnAction1);
-  return returnAction1;
-}
-// ---------------------------------------------------------------------------------------------------
-exports.searchAction4 = function (foodName, startIdx) {
-  const console = require('console');
-  const config = require('config');
-  const http = require('http');
-  let options = {
-    format: 'json',
-    query: {
-      foodName: foodName
-    }
-  };
-  let response = http.getUrl(config.get('remote.url') + '/food', options);
-  let data = response;
-  let index = startIdx - 1;
-  let harmful = false;
-  let returnAction4 = new Array();
-  let i, j = 0, k = 0;
-
-  for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    let recipeArr = new Array();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.mainImage = data[i].mainImage;
-    returnObj.harmful = harmful;
-
-    let recipeOptions = {
+    // 문구 수정 필요
+    infoJudge = true;
+    returnAction3.infoJudge = infoJudge;
+    returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
+    returnAction3.foodDescription = String(data[checkIdx].foodDescription);
+    returnAction3.recipe = recipeArr;
+    console.log(returnAction3);
+    return returnAction3;
+  } else {
+    let harmfulOptions = {
       format: 'json',
       query: {
-        foodName: foodName
+        foodName: foodName,
+        bodyName: bodyName
       }
     };
-    let recipeResponse = http.getUrl(config.get('remote.url') + '/recipe', options);
-    for (k = 0; k < recipeResponse.length; k++) {
-      let recipeObj = new Object();
-      recipeObj.recipeURL = recipeResponse[k].recipeUrl;
-      recipeObj.recipeName = recipeResponse[k].recipeName;
-      recipeObj.recipeImage = recipeResponse[k].recipeImage;
-      recipeArr.push(recipeObj);
-      delete recipeObj;
-    }
-    returnObj.recipe = recipeArr;
-    returnAction4.push(returnObj);
-    delete returnObj;
-    delete recipeArr
-    j++;
-    if (j == 3) break;
-  }
-  for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
-  console.log(returnAction4);
-  return returnAction4;
-}
-exports.searchAction1_harmful = function (bodyName, startIdx) {
-  const console = require('console');
-  const config = require('config');
-  const http = require('http');
-  let options = {
-    format: 'json',
-    query: {
-      bodyName: bodyName
-    }
-  };
-  let response = http.getUrl(config.get('remote.url') + '/harmful', options);
-  let data = response;
-  let index = startIdx - 1;
-  let returnAction1 = new Array();
-  let harmful = true;
-  let i, j = 0;
+    let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
+    if (harmfulResponse.length < 1) {
+      infoJudge = false;
+      let returnAction1 = new Object();
+      let returnAction4 = new Object();
+      returnAction3.infoJudge = infoJudge;
+      returnAction1 = search.searchAction1(bodyName, startIdx);
+      returnAction4 = search.searchAction4(foodName, startIdx);
 
-  for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.harmful = harmful;
-    returnObj.mainImage = data[i].mainImage;
-    returnAction1.push(returnObj);
-    delete returnObj;
-    j++;
-    if (j == 3) break;
-  }
-  for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-  console.log(returnAction1);
-  return returnAction1;
+      returnAction3.returnAction1 = returnAction1;
+      returnAction3.returnAction4 = returnAction4;
+      console.log(search.searchAction1(bodyName, startIdx));
+      returnAction3.answer = foodName + "과 " + bodyName + "관련 정보를 찾아봤어요.";
+      console.log(returnAction3);
+      return returnAction3;
+    } else {
+      infoJudge = true;
+      returnAction3.infoJudge = infoJudge;
+      // 문구 수정필요
+      returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
+      returnAction3.foodDescription = String(harmfulResponse[0].foodDescription);
+      console.log(returnAction3);
+      return returnAction3;
 
-}
-exports.searchAction4_harmful = function (foodName, startIdx) {
-  const console = require('console');
-  const config = require('config');
-  const http = require('http');
-  let options = {
-    format: 'json',
-    query: {
-      foodName: foodName
     }
-  };
-  let response = http.getUrl(config.get('remote.url') + '/harmful', options);
-  let data = response;
-  let index = startIdx - 1;
-  let returnAction4 = new Array();
-  let harmful = true;
-  let i, j = 0;
-
-  for (i = 0; i < data.length; i++) {
-    let returnObj = new Object();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.harmful = harmful;
-    returnAction4.push(returnObj);
-    delete returnObj;
-    j++;
-    if (j == 3) break;
   }
-  for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
-  console.log(returnAction4);
-  return returnAction4;
 }
