@@ -30,11 +30,11 @@ result-view{
         section{
           content{
             paragraph{
-              style(Title_S)  //이메일로 연락달라하기
+              style(Detail_L)  //이메일로 연락달라하기
               value("이런! #{value(this.bodyName)}에 대한 정보가 없어요.")
             }
             paragraph{
-              style(Detail_L)  //이메일로 연락달라하기
+              style(Detail_M)  //이메일로 연락달라하기
               value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 알려주실래요?")
             }
             attribution-link{
@@ -44,7 +44,7 @@ result-view{
                url("https://github.com/thisisgod/likesoju.savehealth")
             }
             paragraph{
-              style(Detail_L)  //이메일로 연락달라하기
+              style(Detail_M)  //이메일로 연락달라하기
               value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
             }
           }
