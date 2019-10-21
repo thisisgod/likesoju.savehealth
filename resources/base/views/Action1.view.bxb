@@ -53,7 +53,7 @@ result-view{
               label{
                 template ("건강챙겨에게 찾지 못한 정보 알려주기")
               }
-               url("https://github.com/thisisgod/likesoju.savehealth")
+               url("http://www.moakt.com/ko")
             }
             paragraph{
               style(Detail_L)

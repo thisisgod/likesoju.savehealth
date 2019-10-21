@@ -209,9 +209,9 @@ exports.searchAction4_harmful = function (foodName, startIdx) {
     let returnObj = new Object();
     returnObj.id = j + startIdx;
     returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
     returnObj.foodName = data[i].foodName;
     returnObj.harmful = harmful;
+    returnObj.foodDescription = data[i].foodDescription;
     returnAction4.push(returnObj);
     delete returnObj;
     j++;

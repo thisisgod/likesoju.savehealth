@@ -74,11 +74,6 @@ module.exports.function = function action3(foodName, bodyName, request) {
       returnAction3.returnAction1 = returnAction1;
       returnAction3.returnAction4 = returnAction4;
       console.log(search.searchAction1(bodyName, startIdx));
-      // 문구 수정필요
-      // 1. 블루베리가 좋은 신체부위
-      // 2. 블루베리가 안좋은 신체부위
-      // 3. 눈에 좋은 음식
-      // 4. 눈에 안좋은 음식
       returnAction3.answer = foodName + "과 " + bodyName + "관련 정보를 찾아봤어요.";
       console.log(returnAction3);
       return returnAction3;
@@ -87,7 +82,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
       returnAction3.infoJudge = infoJudge;
       // 문구 수정필요
       returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
-      returnAction3.foodDescription = String(harmfulResponse[0].description);
+      returnAction3.foodDescription = String(harmfulResponse[0].foodDescription);
       console.log(returnAction3);
       return returnAction3;
 
