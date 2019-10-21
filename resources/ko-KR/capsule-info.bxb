@@ -14,5 +14,7 @@ capsule-info {
   }
   search-keywords{
     keyword (건강챙겨)//마켓플레이스에서의 검색 키워드
+    keyword (건강 챙겨)
+    keyword (건강 음식)
   }
 }
