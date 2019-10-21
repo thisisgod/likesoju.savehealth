@@ -64,14 +64,14 @@ result-view{
 
   conversation-drivers{ //hint
     conversation-driver{
-      //if(this.isFind){
+      if(this.isFind){
         if(!this.harmful){
           template ("#{value(this.bodyName)}에 나쁜 음식이 뭐야?")
         }
         else{
           template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
         }
-      //}
+      }
     }
   }
 }
