@@ -20,6 +20,7 @@ result-view{
       layout{
         section{
           content{
+            image("#{value(this.mainImage)}")
             title-area{
               halign (Start)
               slot1{
@@ -56,13 +57,11 @@ result-view{
             }
             paragraph{
               style(Detail_M)
-              value("혹시 제가 잘못 알고 있다면 더 똑똑해질 건강챙겨를 위해 알려주실래요?")
+              value("혹시 제가 잘못 알고 있다면 더 똑똑해질 건강챙겨를 위해 아래의 이메일로 알려주실래요?")
             }
-            attribution-link{
-              label{
-                template ("건강챙겨에게 찾지 못한 정보 알려주기")
-              }
-              url("https://github.com/thisisgod/likesoju.savehealth")
+            paragraph{
+              style(Detail_M_Soft)
+              value("yeongmi7110@gmail.com")
             }
             paragraph{
               style(Detail_M)
@@ -129,16 +128,16 @@ result-view{
     }
   }
 
-  //conversation-drivers{
-    //conversation-driver{
-      //if(this.isFind){
-        //template ("#{value(this.foodName)}이(가) 어디에 좋아?")
-        //template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
-      //}
-      //else-if (!this.isFind&&this.infoJudge){
-        //template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
-        //template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
-      //}
-    //}
-  //}
+  conversation-drivers{
+    conversation-driver{
+      if(this.isFind){
+        template ("#{value(this.foodName)}이(가) 어디에 좋아?")
+        template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
+      }
+      else-if (!this.isFind&&this.infoJudge){
+        template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
+        template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
+      }
+    }
+  }
 }
