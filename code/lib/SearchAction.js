@@ -166,7 +166,7 @@ exports.searchAction1_harmful = function (bodyName, startIdx) {
     returnObj.id = 1;
     returnObj.index = 1;
     returnObj.bodyName = bodyName;
-    returnObj.foodName = foodName + "에 대한 정보가 없어요";
+    returnObj.foodName = bodyName + "에 대한 정보가 없어요";
     returnObj.isFind = isFind;
     console.log("isFind == " + returnObj.isFind);
     returnAction1.push(returnObj);

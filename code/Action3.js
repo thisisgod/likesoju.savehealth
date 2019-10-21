@@ -30,7 +30,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
   console.log(returnAction3.isFind);
 
   if (isFind === true) {
-    console.log("isFind == "+isFind);
+    console.log("isFind == " + isFind);
     returnAction3.mainImage = data[checkIdx].mainImage;
     let recipeOptions = {
       format: 'json',
@@ -51,7 +51,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
     }
     // 문구 수정 필요
     infoJudge = true;
-    console.log("isFind == "+isFind+"||infoJudge=="+infoJudge);
+    console.log("isFind == " + isFind + "||infoJudge==" + infoJudge);
     returnAction3.infoJudge = infoJudge;
     returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
     returnAction3.foodDescription = String(data[checkIdx].foodDescription);
@@ -59,7 +59,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
     returnAction3.recipe = recipeArr;
     console.log(returnAction3);
     return returnAction3;
-  } 
+  }
   else {
     let harmfulOptions = {
       format: 'json',
@@ -71,12 +71,18 @@ module.exports.function = function action3(foodName, bodyName, request) {
     let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
     if (harmfulResponse.length < 1) {
       infoJudge = false;
-      console.log("isFind == "+isFind+"||infoJudge=="+infoJudge);
+      console.log("isFind == " + isFind + "||infoJudge==" + infoJudge);
       let returnAction1 = new Object();
       let returnAction4 = new Object();
       returnAction3.infoJudge = infoJudge;
-      returnAction1 = search.searchAction1(bodyName, startIdx);
-      returnAction4 = search.searchAction4(foodName, startIdx);
+      if (request == "Good") {
+        returnAction1 = search.searchAction1(bodyName, startIdx);
+        returnAction4 = search.searchAction4(foodName, startIdx);
+      }
+      else {
+        returnAction1 = search.searchAction1_harmful(bodyName, startIdx);
+        returnAction4 = search.searchAction4_harmful(foodName, startIdx);
+      }
 
       returnAction3.returnAction1 = returnAction1;
       returnAction3.returnAction4 = returnAction4;
@@ -87,7 +93,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
       return returnAction3;
     } else {
       infoJudge = true;
-      console.log("isFind == "+isFind+"||infoJudge=="+infoJudge);
+      console.log("isFind == " + isFind + "||infoJudge==" + infoJudge);
       returnAction3.infoJudge = infoJudge;
       // 문구 수정필요
       returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
