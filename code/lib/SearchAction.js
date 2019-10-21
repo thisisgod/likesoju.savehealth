@@ -19,7 +19,7 @@ exports.searchAction1 = function (bodyName, startIdx) {
     returnObj.id = 1;
     returnObj.index = 1;
     returnObj.bodyName = bodyName;
-    returnObj.foodName = "못찾음";
+    returnObj.foodName = foodName+"에 대한 정보가 없어요";
     returnObj.isFind = isFind;
     returnAction1.push(returnObj);
     console.log(returnAction1);
@@ -87,7 +87,7 @@ exports.searchAction4 = function (foodName, startIdx) {
     isFind = false;
     let returnObj = new Object();
     returnObj.id = 1;
-    returnObj.bodyName = "못찾음";
+    returnObj.bodyName = foodName+"에 대한 정보가 없어요";
     returnObj.foodName = foodName;
     returnObj.index = 1;
     returnObj.isFind = isFind;

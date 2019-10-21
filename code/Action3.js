@@ -30,6 +30,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
   console.log(returnAction3.isFind);
 
   if (isFind === true) {
+    console.log("isFind == "+isFind);
     returnAction3.mainImage = data[checkIdx].mainImage;
     let recipeOptions = {
       format: 'json',
@@ -50,6 +51,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
     }
     // 문구 수정 필요
     infoJudge = true;
+    console.log("isFind == "+isFind+"||infoJudge=="+infoJudge);
     returnAction3.infoJudge = infoJudge;
     returnAction3.answer = foodName + "는 " + bodyName + "에 좋아요.";
     returnAction3.foodDescription = String(data[checkIdx].foodDescription);
@@ -69,6 +71,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
     let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
     if (harmfulResponse.length < 1) {
       infoJudge = false;
+      console.log("isFind == "+isFind+"||infoJudge=="+infoJudge);
       let returnAction1 = new Object();
       let returnAction4 = new Object();
       returnAction3.infoJudge = infoJudge;
@@ -77,18 +80,18 @@ module.exports.function = function action3(foodName, bodyName, request) {
 
       returnAction3.returnAction1 = returnAction1;
       returnAction3.returnAction4 = returnAction4;
-      returnAction3.mainImage = data[checkIdx].mainImage;
+      //returnAction3.mainImage = data[checkIdx].mainImage;
       console.log(search.searchAction1(bodyName, startIdx));
       returnAction3.answer = foodName + "과 " + bodyName + "관련 정보를 찾아봤어요.";
       console.log(returnAction3);
       return returnAction3;
     } else {
-      console.log("Asd");
       infoJudge = true;
+      console.log("isFind == "+isFind+"||infoJudge=="+infoJudge);
       returnAction3.infoJudge = infoJudge;
-      returnAction3.mainImage = data[0].mainImage;
       // 문구 수정필요
       returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
+      returnAction3.mainImage = data[0].mainImage;
       returnAction3.foodDescription = String(harmfulResponse[0].foodDescription);
       console.log(returnAction3);
       return returnAction3;
