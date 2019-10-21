@@ -41,13 +41,22 @@ result-view{
       layout{
         section{
           content{
-            paragraph{
-              style(Title_S)  //이메일로 연락달라하기
-              value("이런! #{value(this.foodName)}, #{value(this.bodyName)} 둘 사이에 관한 정보가 없어요.")
+            title-area{
+              halign (Start)
+              slot1{
+                text{
+                  style(Legal)
+                  value("설명")
+                }
+              }
             }
             paragraph{
-              style(Detail_L)
-              value("아직 건강챙겨가 배울게 많은 것 같아요. 더 똑똑해질 건강챙겨를 위해 무슨 정보인지 알려주실래요?")
+              style(Detail_L)  //이메일로 연락달라하기
+              value("#{value(this.foodName)}는 #{value(this.bodyName)}에 대해 알려진 효과가 없어요.")
+            }
+            paragraph{
+              style(Detail_M)
+              value("혹시 제가 잘못 알고 있다면 더 똑똑해질 건강챙겨를 위해 알려주실래요?")
             }
             attribution-link{
               label{
@@ -56,24 +65,27 @@ result-view{
               url("https://github.com/thisisgod/likesoju.savehealth")
             }
             paragraph{
-              style(Detail_L)
+              style(Detail_M)
               value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
             }
             if(size(this.returnAction1)>0||size(this.returnAction4)>0){
               paragraph{
-                style(Detail_L)
-                value("대신 제가 알고 있는 이런 정보는 어때요?")
+                style(Detail_M)
+                value("이것 말고도 제가 알고 있는 이런 정보는 어때요?")
               }
               paragraph{
-                style(Detail_L)
-                value("")
+                style(Detail_M)
+                value(" ")
               }
             }
             if(size(this.returnAction1)>0){
-              single-line{
-                text{
-                  value("#{value(this.bodyName)}에 좋은 음식")
-                  style(Legal)
+              title-area{
+                halign (End)
+                slot1{
+                  text{
+                    value("#{value(this.bodyName)}에 좋은 음식")
+                    style(Detail_L_Soft)
+                  }
                 }
               }
               for-each (this.returnAction1){
@@ -87,21 +99,21 @@ result-view{
               }
             }
             if(size(this.returnAction4)>0){
-              single-line{
-                text{
-                  value("#{value(this.foodName)}의 효능")
-                  style(Legal)
+              title-area{
+                halign (End)
+                slot1{
+                  text{
+                    value("#{value(this.foodName)}의 효능")
+                    style(Detail_L_Soft)
+                  }
                 }
               }
               for-each (this.returnAction4){
                 as (item){
-                  title-area {
-                    halign (Start)
-                    slot1 {
-                      text {
-                        value ("#{value(item.bodyName)}")
-                        style (Title_S)
-                      }
+                  single-line{
+                    text{
+                      value("#{value(item.bodyName)}")
+                      style(Title_S)
                     }
                   }
                   paragraph{
@@ -117,16 +129,16 @@ result-view{
     }
   }
 
-  conversation-drivers{
-    conversation-driver{
-      if(this.isFind){
+  //conversation-drivers{
+    //conversation-driver{
+      //if(this.isFind){
         //template ("#{value(this.foodName)}이(가) 어디에 좋아?")
         //template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
-      }
-      else-if (!this.isFind&&this.infoJudge){
+      //}
+      //else-if (!this.isFind&&this.infoJudge){
         //template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
         //template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
-      }
-    }
-  }
+      //}
+    //}
+  //}
 }
