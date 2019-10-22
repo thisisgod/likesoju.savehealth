@@ -1,10 +1,10 @@
 train (t-j45onm9n8typks4xsikqasc5y) {
-  utterance ("[g:ReturnAction3] (마늘)[v:FoodName]이 (피로회복)[v:BodyName]에 (좋니)[v:Request:Good]")
-  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
-  last-modified (1571595251525)
+  utterance ("[g:ReturnAction3] (소고기)[v:FoodName]가 (피로회복)[v:BodyName]에 (좋니)[v:Request:Good]")
+  plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSUMLAyMDEwMzECaAciCQBgAiUHlAA==)
+  last-modified (1571673254916)
 }
 train (t-jf3ii6j9ktha1cuww826i8sdf) {
-  utterance ("[g:ReturnAction3] (빈혈)[v:BodyName]에는 (땅콩)[v:FoodName] 먹어도 (되)[v:Request:Good]")
-  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
-  last-modified (1571472720829)
+  utterance ("[g:ReturnAction3] (빈혈)[v:BodyName]에 (땅콩)[v:FoodName] 먹어도 (돼)[v:Request:Good]")
+  plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSUMLAyMDEwMzECaAciCQBgAiUHlAA==)
+  last-modified (1571673288784)
 }

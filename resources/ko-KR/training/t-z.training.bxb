@@ -4,7 +4,7 @@ train (t-zaehl2x3297lmbu9fvi1izf7j) {
   last-modified (1571470654505)
 }
 train (t-zddngc2nrqk684ukadyqgj922) {
-  utterance ("[g:ReturnAction3] (사과)[v:FoodName]가 (감기)[v:BodyName]에 (안 좋았니)[v:Request:Harmful]")
-  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
-  last-modified (1571472965804)
+  utterance ("[g:ReturnAction3] (당뇨)[v:BodyName]에 (감자)[v:FoodName]가 (안 좋았니)[v:Request:Harmful]")
+  plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSUMLAyMDEwMzECaAciCQBgAiUHlAA==)
+  last-modified (1571673734174)
 }

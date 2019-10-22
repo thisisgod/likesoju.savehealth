@@ -1,5 +1,5 @@
 train (t-ib17p479pat03tnpohgxhqctz) {
-  utterance ("[g:ReturnAction4] (돼지고기)[v:FoodName]가 어디에 (해로워)[v:Request:Harmful]")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571469925434)
+  utterance ("[g:ReturnAction4] (술)[v:FoodName]이 어디에 (해로워)[v:Request:Harmful]")
+  plan (Y2BhUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2GQxqYEJimDTdItPz/FLzE3FbvWoNTC0tTiEgZmBkYGJiDJAKRBEAJAfLAoAA==)
+  last-modified (1571673213402)
 }

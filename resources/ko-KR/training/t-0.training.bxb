@@ -1,5 +1,5 @@
 train (t-0mn278bef6mr44b7h1kkqw3w1) {
-  utterance ("[g:ReturnAction1] (당뇨)[v:BodyName]에 먹으면 (안 되는)[v:Request:Harmful] 음식이 뭐였지")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571468977874)
+  utterance ("[g:ReturnAction1] (고혈압)[v:BodyName]에 먹으면 (안 되는)[v:Request:Harmful] 음식이 뭐였지")
+  plan (Y2BhUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2SQxqYEJimDTdIpP6XSLzE3FbvWoNTC0tTiEgZmBkYGJiDJAKRBEAJAfLAoAA==)
+  last-modified (1571672946452)
 }

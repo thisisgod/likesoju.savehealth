@@ -1,5 +1,0 @@
-train (t-9f4m3w6tsv53e5qpqdn12qfjq) {
-  utterance ("[g:ReturnAction4] (도라지)[v:FoodName]가 어디에 (안 좋은지)[v:Request:Harmful] 알려줘")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571588700205)
-}
