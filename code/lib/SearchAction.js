@@ -22,14 +22,12 @@ exports.searchAction1 = function (bodyName, startIdx) {
     returnObj.bodyName = bodyName;
     returnObj.foodName = foodName + "에 대한 정보가 없어요";
     returnObj.isFind = isFind;
-    console.log("isFind == " + returnObj.isFind);
     returnAction1.push(returnObj);
     console.log(returnAction1);
     return returnAction1;
   }
   else {
     isFind = true
-    console.log("isFind == " + isFind);
     let index = startIdx - 1;
     let harmful = false;
     let i, j = 0, k = 0;
@@ -43,7 +41,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
       returnObj.foodName = data[i].foodName;
       returnObj.mainImage = data[i].mainImage;
       returnObj.isFind = isFind;
-      console.log("isFind == " + returnObj.isFind);
       returnObj.harmful = harmful;
       let recipeOptions = {
         format: 'json',
@@ -69,9 +66,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
     }
     for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
     console.log(returnAction1);
-    console.log("isFind == " + returnAction1[0].isFind);
-    console.log("isFind == " + returnAction1[1].isFind);
-    console.log("isFind == " + returnAction1[2].isFind);
     return returnAction1;
   }
 }
