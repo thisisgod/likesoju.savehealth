@@ -24,6 +24,10 @@ structure (ReturnAction1) {
     type(FoodName)
     min (Required) max (One)
   }
+  property (isFind){
+    type(IsFind)
+    min (Required) max (One)
+  }
   property (index){
     type(Index)
     min (Required) max (One)

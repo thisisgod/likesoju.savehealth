@@ -28,6 +28,10 @@ structure (ReturnAction4) {
     type(Index)
     min (Required) max (One)
   }
+  property (isFind){
+    type(IsFind)
+    min (Required) max (One)
+  }
   property (mainImage){
     type (MainImage)
     min (Optional) max (One)
