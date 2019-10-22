@@ -20,16 +20,16 @@ exports.searchAction1 = function (bodyName, startIdx) {
     returnObj.id = 1;
     returnObj.index = 1;
     returnObj.bodyName = bodyName;
-    returnObj.foodName = foodName+"에 대한 정보가 없어요";
+    returnObj.foodName = foodName + "에 대한 정보가 없어요";
     returnObj.isFind = isFind;
-    console.log("isFind == "+returnObj.isFind);
+    console.log("isFind == " + returnObj.isFind);
     returnAction1.push(returnObj);
     console.log(returnAction1);
     return returnAction1;
   }
   else {
     isFind = true
-    console.log("isFind == "+isFind);
+    console.log("isFind == " + isFind);
     let index = startIdx - 1;
     let harmful = false;
     let i, j = 0, k = 0;
@@ -43,7 +43,7 @@ exports.searchAction1 = function (bodyName, startIdx) {
       returnObj.foodName = data[i].foodName;
       returnObj.mainImage = data[i].mainImage;
       returnObj.isFind = isFind;
-      console.log("isFind == "+returnObj.isFind);
+      console.log("isFind == " + returnObj.isFind);
       returnObj.harmful = harmful;
       let recipeOptions = {
         format: 'json',
@@ -69,9 +69,9 @@ exports.searchAction1 = function (bodyName, startIdx) {
     }
     for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
     console.log(returnAction1);
-    console.log("isFind == "+returnAction1[0].isFind);
-    console.log("isFind == "+returnAction1[1].isFind);
-    console.log("isFind == "+returnAction1[2].isFind);
+    console.log("isFind == " + returnAction1[0].isFind);
+    console.log("isFind == " + returnAction1[1].isFind);
+    console.log("isFind == " + returnAction1[2].isFind);
     return returnAction1;
   }
 }
@@ -94,7 +94,7 @@ exports.searchAction4 = function (foodName, startIdx) {
     isFind = false;
     let returnObj = new Object();
     returnObj.id = 1;
-    returnObj.bodyName = foodName+"에 대한 정보가 없어요";
+    returnObj.bodyName = foodName + "에 대한 정보가 없어요";
     returnObj.foodName = foodName;
     returnObj.index = 1;
     returnObj.isFind = isFind;
@@ -158,27 +158,45 @@ exports.searchAction1_harmful = function (bodyName, startIdx) {
   };
   let response = http.getUrl(config.get('remote.url') + '/harmful', options);
   let data = response;
-  let index = startIdx - 1;
   let returnAction1 = new Array();
   let harmful = true;
-  let i, j = 0;
-
-  for (i = 0; i < data.length; i++) {
+  if (response.length < 1) {
     let returnObj = new Object();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.harmful = harmful;
+    isFind = false;
+    returnObj.id = 1;
+    returnObj.index = 1;
+    returnObj.bodyName = bodyName;
+    returnObj.foodName = foodName + "에 대한 정보가 없어요";
+    returnObj.isFind = isFind;
+    console.log("isFind == " + returnObj.isFind);
     returnAction1.push(returnObj);
-    delete returnObj;
-    j++;
-    if (j == 3) break;
+    console.log(returnAction1);
+    return returnAction1;
   }
-  for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-  console.log(returnAction1);
-  return returnAction1;
+  else {
+    let index = startIdx - 1;
+    let i, j = 0;
+    isFind = true;
 
+    for (i = 0; i < data.length; i++) {
+      let returnObj = new Object();
+      returnObj.id = j + startIdx;
+      returnObj.bodyName = data[i].bodyName;
+      returnObj.foodDescription = data[i].foodDescription;
+      returnObj.foodName = data[i].foodName;
+      returnObj.harmful = harmful;
+      returnObj.mainImage = data[i].mainImage;
+      returnObj.isFind = isFind;
+      returnAction1.push(returnObj);
+      delete returnObj;
+      j++;
+      if (j == 3) break;
+    }
+    for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
+    console.log(returnAction1);
+    return returnAction1;
+
+  }
 }
 exports.searchAction4_harmful = function (foodName, startIdx) {
   const console = require('console');
@@ -192,24 +210,40 @@ exports.searchAction4_harmful = function (foodName, startIdx) {
   };
   let response = http.getUrl(config.get('remote.url') + '/harmful', options);
   let data = response;
-  let index = startIdx - 1;
   let returnAction4 = new Array();
   let harmful = true;
-  let i, j = 0;
-
-  for (i = 0; i < data.length; i++) {
+  if (response.length < 1) {
+    isFind = false;
     let returnObj = new Object();
-    returnObj.id = j + startIdx;
-    returnObj.bodyName = data[i].bodyName;
-    returnObj.foodDescription = data[i].foodDescription;
-    returnObj.foodName = data[i].foodName;
-    returnObj.harmful = harmful;
+    returnObj.id = 1;
+    returnObj.bodyName = foodName + "에 대한 정보가 없어요";
+    returnObj.foodName = foodName;
+    returnObj.index = 1;
+    returnObj.isFind = isFind;
     returnAction4.push(returnObj);
-    delete returnObj;
-    j++;
-    if (j == 3) break;
+    console.log(returnAction4);
+    return returnAction4;
   }
-  for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
-  console.log(returnAction4);
-  return returnAction4;
+  else {
+    let index = startIdx - 1;
+    let i, j = 0;
+    isFind = true;
+    for (i = 0; i < data.length; i++) {
+      let returnObj = new Object();
+      returnObj.id = j + startIdx;
+      returnObj.bodyName = data[i].bodyName;
+      returnObj.foodDescription = data[i].foodDescription;
+      returnObj.foodName = data[i].foodName;
+      returnObj.mainImage = data[i].mainImage;
+      returnObj.harmful = harmful;
+      returnObj.isFind = isFind
+      returnAction4.push(returnObj);
+      delete returnObj;
+      j++;
+      if (j == 3) break;
+    }
+    for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
+    console.log(returnAction4);
+    return returnAction4;
+  }
 }
