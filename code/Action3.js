@@ -30,7 +30,6 @@ module.exports.function = function action3(foodName, bodyName, request) {
   console.log(returnAction3.isFind);
 
   if (isFind === true) {
-    console.log("isFind == " + isFind);
     returnAction3.mainImage = data[checkIdx].mainImage;
     let recipeOptions = {
       format: 'json',
@@ -97,7 +96,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
       returnAction3.infoJudge = infoJudge;
       // 문구 수정필요
       returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
-      returnAction3.mainImage = data[0].mainImage;
+      returnAction3.mainImage = harmfulResponse[0].mainImage;
       returnAction3.foodDescription = String(harmfulResponse[0].foodDescription);
       console.log(returnAction3);
       return returnAction3;
