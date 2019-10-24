@@ -5,12 +5,12 @@ result-view{
 
   message{  //다이얼
     if(this.isFind){
-      if(!this.harmful){
+      //if(!this.harmful){
         template ("#{value(this.foodName)}이(가) 효과 있는 신체 부위입니다.")
-      }
-      else{
-        template ("#{value(this.foodName)}이(가) 부작용 있는 신체 부위입니다.")
-      }
+      // }
+      // else{
+      //   template ("#{value(this.foodName)}이(가) 부작용 있는 신체 부위입니다.")
+      // }
     }
     else{
       template ("이런! #{value(this.foodName)}에 대한 정보가 없어요.")
@@ -48,14 +48,14 @@ result-view{
     }
   }
 
-  conversation-drivers{ //hint
-    conversation-driver{
-      if(!this.harmful){
-        template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
-      }
-      else{
-        template ("#{value(this.foodName)}이(가) 어디에 좋아?")
-      }
-    }
-  }
+  // conversation-drivers{ //hint
+  //   conversation-driver{
+  //     if(!this.harmful){
+  //       template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
+  //     }
+  //     else{
+  //       template ("#{value(this.foodName)}이(가) 어디에 좋아?")
+  //     }
+  //   }
+  // }
 }
