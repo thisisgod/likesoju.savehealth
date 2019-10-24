@@ -4,11 +4,13 @@ result-view{
   }
 
   message{  //다이얼
-    if(this.isFind&&this.infoJudge){
+    if(this.isFind){
+    //if(this.isFind&&this.infoJudge){
       template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 좋은 음식입니다.")
-    }
-    else-if(!this.isFind&&this.infoJudge){
-      template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 나쁜 음식입니다.")
+    //}
+    // else-if(!this.isFind&&this.infoJudge){
+    //   template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 나쁜 음식입니다.")
+    // }
     }
     else{
       template ("#{value(this.foodName)}와(과) #{value(this.bodyName)}에 대해 찾아봤습니다.")
@@ -80,7 +82,7 @@ result-view{
               }
             }
             if(size(this.returnAction1)>0){
-              if(this.returnAction1[0].harmful){
+              //if(this.returnAction1[0].harmful){
                 title-area{
                   halign (End)
                   slot1{
@@ -90,18 +92,18 @@ result-view{
                     }
                   }
                 }
-              }
-              else{
-                title-area{
-                  halign (End)
-                  slot1{
-                    text{
-                      value("#{value(this.bodyName)}에 나쁜 음식")
-                      style(Detail_L_Soft)
-                    }
-                  }
-                }
-              }
+              // }
+              // else{
+              //   title-area{
+              //     halign (End)
+              //     slot1{
+              //       text{
+              //         value("#{value(this.bodyName)}에 나쁜 음식")
+              //         style(Detail_L_Soft)
+              //       }
+              //     }
+              //   }
+              // }
               for-each (this.returnAction1){
                 as (item){
                   compound-card {
@@ -132,7 +134,7 @@ result-view{
 
 
             if(size(this.returnAction4)>0){
-              if(this.returnAction4[0].isFind){
+              //if(this.returnAction4[0].isFind){
                 title-area{
                   halign (End)
                   slot1{
@@ -142,18 +144,18 @@ result-view{
                     }
                   }
                 }
-              }
-              else{
-                title-area{
-                  halign (End)
-                  slot1{
-                    text{
-                      value("#{value(this.foodName)}의 부작용")
-                      style(Detail_L_Soft)
-                    }
-                  }
-                }
-              }
+              //}
+              // else{
+              //   title-area{
+              //     halign (End)
+              //     slot1{
+              //       text{
+              //         value("#{value(this.foodName)}의 부작용")
+              //         style(Detail_L_Soft)
+              //       }
+              //     }
+              //   }
+              // }
               
               for-each (this.returnAction4){
                 as (item){
@@ -176,16 +178,16 @@ result-view{
     }
   }
 
-  conversation-drivers{
-    conversation-driver{
-      if(this.isFind){
-        template ("#{value(this.foodName)}이(가) 어디에 좋아?")
-        template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
-      }
-      else-if (!this.isFind&&this.infoJudge){
-        template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
-        template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
-      }
-    }
-  }
+  // conversation-drivers{
+  //   conversation-driver{
+  //     if(this.isFind){
+  //       template ("#{value(this.foodName)}이(가) 어디에 좋아?")
+  //       template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
+  //     }
+  //     else-if (!this.isFind&&this.infoJudge){
+  //       template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
+  //       template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
+  //     }
+  //   }
+  // }
 }
