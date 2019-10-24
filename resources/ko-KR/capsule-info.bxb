@@ -2,9 +2,9 @@ capsule-info {
   display-name (건강챙겨)
   developer-name (LikeSoju)
   icon-asset (images/saveHealth.png)
-  description ("음식의 효능과 건강에 좋은 식재료를 알려주는 서비스 입니다. 신체에 좋은 식재료와 그 식재료로 만들 수 있는 음식 레시피를 알 수 있어요!")
-  website-url (https://github.com/thisisgod/likesoju.savehealth)
-  terms-url (https://github.com/thisisgod/likesoju.savehealth)
+  description ("건강에 좋은 식재료와 식재료의 효능을 알려주는 '건강챙겨' 캡슐입니다. 또한, 건강에 좋은 식재료에 대해 레시피를 제공합니다. 당신이 지금 먹고 있는 음식 재료가 어디에 좋은지 '건강챙겨'에게 물어보세요! \n현재 서비스 중인 식재료 : 배추, 고추, 마늘, 당근, 블루베리, 도라지, 생강, 파, 사과, 배, 우유, 호두, 아몬드, 귀리, 호박, 땅콩, 돼지고기, 소고기, 오이, 무, 인삼, 고등어, 바나나, 문어, 수세미 \n앞으로도 계속해서 서비스 품목을 늘려갈 예정입니다! 추가하고 싶은 품목이 있을 경우 yeongmi7110@gmail.com으로 연락주세요. 최대한 빠르게 반영하도록 하겠습니다!")
+  website-url (https://github.com/thisisgod)
+  terms-url (https://github.com/thisisgod)
   dispatch-name (건강 챙겨)//사용자가 부르는 캡슐의 이름
   dispatch-aliases {
     alias (건강챙겨에서)//사용자가 부르는 캡슐의 별칭
