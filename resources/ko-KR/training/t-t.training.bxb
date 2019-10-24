@@ -1,0 +1,10 @@
+train (t-tge5ux8otr964xcz1aojzzyld) {
+  utterance ("[g:ReturnAction3] (감기)[v:BodyName]에 (배추)[v:FoodName]가 (좋아)[v:Request:Good]")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919780337)
+}
+train (t-tvm2yd8hjya79rlymvj3fss0k) {
+  utterance ("[g:ReturnAction3] (빈혈)[v:BodyName]에 (소고기)[v:FoodName]가 (좋니)[v:Request:Good]")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919865824)
+}

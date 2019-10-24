@@ -1,5 +1,15 @@
-train (t-mb19kx9f4hjxnstij0yfh802x) {
-  utterance ("[g:ReturnAction1] (감기)[v:BodyName]에 (나쁜)[v:Request:Harmful] 음식 알려줘")
+train (t-m17buh15gb9nl8dkmggaiir6v) {
+  utterance ("[g:ReturnAction1] (피로회복)[v:BodyName]에는 뭐가 (좋을까)[v:Request:Good]")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571593485020)
+  last-modified (1571919118992)
+}
+train (t-m3x093gcutgqb7d5ozmafmnlz) {
+  utterance ("[g:ReturnAction3] (땅콩)[v:FoodName]이 (당뇨)[v:BodyName]에 (좋은지)[v:Request:Good] 검색해줘")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919456099)
+}
+train (t-mqu9uji9hlqt77lm0o99h5rbl) {
+  utterance ("[g:ReturnAction1] (눈)[v:BodyName]에는 뭐가 (좋아)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919282376)
 }

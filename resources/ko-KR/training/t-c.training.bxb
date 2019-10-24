@@ -1,5 +1,0 @@
-train (t-c1by6elxrfu7uqkmni46m2y4c) {
-  utterance ("[g:ReturnAction1] (고혈압)[v:BodyName]에 (해로운)[v:Request:Harmful] 음식이 뭐 있을까")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571469416505)
-}

@@ -1,5 +1,0 @@
-train (t-avr6khotj12u0g4djtqlgzv39) {
-  utterance ("[g:ReturnAction4] (사과)[v:FoodName]가 분명히 (안 좋은)[v:Request:Harmful] 곳이 있었던거 같은데 넌 아니")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571469606946)
-}

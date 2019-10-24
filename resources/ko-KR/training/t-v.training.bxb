@@ -1,0 +1,5 @@
+train (t-v3amjl0d4k87m8pfkg44c7nei) {
+  utterance ("[g:ReturnAction4] (도라지)[v:FoodName]의 (효능)[v:Request:Good]이 뭐야")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571917658938)
+}

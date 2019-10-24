@@ -3,3 +3,8 @@ train (t-yg78h1u34xh75l11d96b3zo2n) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571468098123)
 }
+train (t-ywftnbqslutizbsfq9zlcx1st) {
+  utterance ("[g:ReturnAction1] (위)[v:BodyName]에 (좋은)[v:Request:Good] 음식 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919114342)
+}

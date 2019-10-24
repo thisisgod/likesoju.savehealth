@@ -1,5 +1,20 @@
+train (t-669mqe2tmdw7tnyvljdqiil9z) {
+  utterance ("[g:ReturnAction1] (피부)[v:BodyName]에는 어떤 음식이 (좋은지)[v:Request:Good] 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919242753)
+}
 train (t-6f70jdttav7alfytmvytvfsyq) {
   utterance ("[g:ReturnAction4] (배추)[v:FoodName]의 (효능)[v:Request:Good] 알려줘")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571395707185)
+}
+train (t-6ihomq7lhhx6usqmcqss2a7ai) {
+  utterance ("[g:ReturnAction1] (우울증)[v:BodyName]에는 뭐가 (좋을까)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919160582)
+}
+train (t-6u04u2nsqs7clnl27pl5ehnuv) {
+  utterance ("[g:ReturnAction1] (변비)[v:BodyName]에는 어떤 음식이 (좋은지)[v:Request:Good] 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919036104)
 }

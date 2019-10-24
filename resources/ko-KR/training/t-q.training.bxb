@@ -1,0 +1,5 @@
+train (t-q20c4psx4h5zf55obkyyq8tb1) {
+  utterance ("[g:ReturnAction3] (블루베리)[v:FoodName]가 (피부)[v:BodyName]에 (좋아)[v:Request:Good]")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919511415)
+}

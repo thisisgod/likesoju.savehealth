@@ -1,0 +1,5 @@
+train (t-n8wbw4tyi07zijq8wgh8jvf3d) {
+  utterance ("[g:ReturnAction4] (호두)[v:FoodName]가 뭐에 (좋아)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571920074575)
+}

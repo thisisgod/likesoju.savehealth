@@ -1,0 +1,5 @@
+train (t-u9h2e30y7vef8pqmgoj4cpwxz) {
+  utterance ("[g:ReturnAction1] (고혈압)[v:BodyName]에는 뭐가 (좋을까)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919241913)
+}

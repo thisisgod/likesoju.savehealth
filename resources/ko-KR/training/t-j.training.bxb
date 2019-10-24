@@ -3,6 +3,11 @@ train (t-j45onm9n8typks4xsikqasc5y) {
   plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSUMLAyMDEwMzECaAciCQBgAiUHlAA==)
   last-modified (1571673254916)
 }
+train (t-jats2bmywdcvbjdm9cuxoibei) {
+  utterance ("[g:ReturnAction4] (생강)[v:FoodName]은 어디에 (좋아)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571920093590)
+}
 train (t-jf3ii6j9ktha1cuww826i8sdf) {
   utterance ("[g:ReturnAction3] (빈혈)[v:BodyName]에 (땅콩)[v:FoodName] 먹어도 (돼)[v:Request:Good]")
   plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSUMLAyMDEwMzECaAciCQBgAiUHlAA==)

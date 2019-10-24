@@ -1,0 +1,5 @@
+train (t-3x4jczpsel9ajfsiirmb4p9pm) {
+  utterance ("[g:ReturnAction3] (눈)[v:BodyName]에 (오이)[v:FoodName]가 (좋아)[v:Request:Good]")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919661143)
+}

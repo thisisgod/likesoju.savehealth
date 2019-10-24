@@ -1,3 +1,8 @@
+train (t-sjjiwpc9l1sukrk29urjy8pgx) {
+  utterance ("[g:ReturnAction1] (감기)[v:BodyName]에는 어떤 음식이 (좋은지)[v:Request:Good] 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919005088)
+}
 train (t-svjix4waqy0a0hhc4bcto03hx) {
   utterance ("[g:ReturnAction1] (다이어트)[v:BodyName]에 (좋은게)[v:Request:Good] 뭐야")
   plan (Y2BhUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2SQxqYEJimDTdIpP6XSLzE3FbvWoNTC0tTiEgZmBkYGJiDJAKRBEAJAfLAoAA==)

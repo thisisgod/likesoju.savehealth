@@ -1,0 +1,5 @@
+train (t-gh0ugi7dmtkyeebuv9k8s069n) {
+  utterance ("[g:ReturnAction1] (당뇨)[v:BodyName]에는 뭘 먹어야 (좋은지)[v:Request:Good] 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919275617)
+}

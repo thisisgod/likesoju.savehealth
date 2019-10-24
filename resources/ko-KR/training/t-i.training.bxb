@@ -1,5 +1,0 @@
-train (t-ib17p479pat03tnpohgxhqctz) {
-  utterance ("[g:ReturnAction4] (술)[v:FoodName]이 어디에 (해로워)[v:Request:Harmful]")
-  plan (Y2BhUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2GQxqYEJimDTdItPz/FLzE3FbvWoNTC0tTiEgZmBkYGJiDJAKRBEAJAfLAoAA==)
-  last-modified (1571673213402)
-}

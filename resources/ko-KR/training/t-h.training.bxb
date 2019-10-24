@@ -1,0 +1,5 @@
+train (t-hbrly4cmcxiyqbnycl04v1suv) {
+  utterance ("[g:ReturnAction3] (땅콩)[v:FoodName]이 (장)[v:BodyName]에 (좋을까)[v:Request:Good]")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919427632)
+}

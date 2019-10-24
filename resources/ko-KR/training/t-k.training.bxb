@@ -1,10 +1,5 @@
-train (t-kaf1j2ipfqw0xrmj2arguua2o) {
-  utterance ("[g:ReturnAction1] (혈액순환)[v:BodyName]에 (안 좋은)[v:Request:Harmful] 게 뭔지 알아")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571588680845)
-}
-train (t-korojd9ugqdr1jjb93xgwblme) {
-  utterance ("[g:ReturnAction4] (마늘)[v:FoodName]이 (안 좋은)[v:Request:Harmful] 곳이 어디야")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571593485813)
+train (t-ktuklucrpdx1qxx0ctrdktv85) {
+  utterance ("[g:ReturnAction3] (피부)[v:BodyName]에 (인삼)[v:FoodName]이 (좋은지)[v:Request:Good] 아니")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919813667)
 }

@@ -3,3 +3,18 @@ train (t-88krzg33mhn4b65k1h8j12u2s) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571588519627)
 }
+train (t-88zrbt35vcm0xdv2phq4cluho) {
+  utterance ("[g:ReturnAction4] (블루베리)[v:FoodName]의 (효능)[v:Request:Good] 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571917665560)
+}
+train (t-8gm0sa3m9fh2xe9vzrwdy1csv) {
+  utterance ("[g:ReturnAction4] (마늘)[v:FoodName]은 어디에 (좋은지)[v:Request:Good] 알려줘")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571920180576)
+}
+train (t-8kji4qupna5srxsw81f8kspdc) {
+  utterance ("[g:ReturnAction4] (도라지)[v:FoodName]는 (좋은)[v:Request:Good] 곳이 있을까")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571920151454)
+}

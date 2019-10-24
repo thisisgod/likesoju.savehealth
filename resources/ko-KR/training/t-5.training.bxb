@@ -1,0 +1,10 @@
+train (t-5n99tenyrlr9mtv5ob1pa233g) {
+  utterance ("[g:ReturnAction4] (아몬드)[v:FoodName]의 (효능)[v:Request:Good]이 뭐야")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571919994634)
+}
+train (t-5snk1b3rl27dp5mymm23c9pf2) {
+  utterance ("[g:ReturnAction4] (당근)[v:FoodName]은 어디에 (좋을까)[v:Request:Good]")
+  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
+  last-modified (1571920116063)
+}

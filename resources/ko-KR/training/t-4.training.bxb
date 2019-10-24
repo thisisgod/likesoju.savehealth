@@ -1,3 +1,8 @@
+train (t-4kyyzl1idbb9vnlbemaljk3sg) {
+  utterance ("[g:ReturnAction3] (파)[v:FoodName]가 (피로회복)[v:BodyName]에 (좋은지)[v:Request:Good] 찾아줘")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919429857)
+}
 train (t-4lux9jlza8eo7j24bwifca1wc) {
   utterance ("[g:ReturnAction4] (블루베리)[v:FoodName]가 어디에 (좋은지)[v:Request:Good] 알려줘")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)

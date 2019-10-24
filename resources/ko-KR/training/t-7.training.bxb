@@ -1,5 +1,5 @@
-train (t-7wacd12alguhkdl9w1dfpn675) {
-  utterance ("[g:ReturnAction1] (감기)[v:BodyName]에 (나쁜게)[v:Request:Harmful] 뭐야")
-  plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
-  last-modified (1571468702915)
+train (t-79pszkn29fvxbdmv65rbyp8wz) {
+  utterance ("[g:ReturnAction3] (심혈관)[v:BodyName]에는 (고추)[v:FoodName]가 (좋아)[v:Request:Good]")
+  plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
+  last-modified (1571919754247)
 }
