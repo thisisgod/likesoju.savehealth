@@ -71,7 +71,7 @@ result-view{
               value("감사합니다. 열심히 공부해서 건강챙겨가 건강을 챙겨줄게요!")
             }
 
-            if(size(this.returnAction1)>0||size(this.returnAction4)>0){
+            if(this.returnAction1[0].isFind||this.returnAction4[0].isFind){
               title-area{
                 halign (Center)
                 slot1{
@@ -90,7 +90,7 @@ result-view{
                 value(" ")
               }
             }
-            if(size(this.returnAction1)>0){
+            if(this.returnAction1[0].isFind){
               //if(this.returnAction1[0].harmful){
                 title-area{
                   halign (End)
@@ -142,8 +142,8 @@ result-view{
             }
 
 
-            if(size(this.returnAction4)>0){
-              //if(this.returnAction4[0].isFind){
+            if(this.returnAction4[0].isFind){
+              //if(this.returnAction4[0].harmful){
                 title-area{
                   halign (End)
                   slot1{
@@ -187,16 +187,24 @@ result-view{
     }
   }
 
-  // conversation-drivers{
-  //   conversation-driver{
-  //     if(this.isFind){
-  //       template ("#{value(this.foodName)}이(가) 어디에 좋아?")
-  //       template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
-  //     }
-  //     else-if (!this.isFind&&this.infoJudge){
-  //       template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
-  //       template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
-  //     }
-  //   }
-  // }
+  conversation-drivers{
+    conversation-driver{
+      if(this.isFind){
+        template ("#{value(this.foodName)}이(가) 좋은 다른 부위 알려줘")
+      }
+      // else-if (!this.isFind&&this.infoJudge){
+      //   template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
+      //   template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
+      // }
+    }
+    conversation-driver{
+      if(this.isFind){
+        template ("#{value(this.bodyName)}에 다른 좋은 음식 알려줘")
+      }
+      // else-if (!this.isFind&&this.infoJudge){
+      //   template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
+      //   template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
+      // }
+    }
+  }
 }
