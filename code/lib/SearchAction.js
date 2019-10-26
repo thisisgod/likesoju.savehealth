@@ -12,7 +12,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
 
   let data = response;
   let isFind = false;
-  console.log(isFind);
   let returnAction1 = new Array();
   if (response.length < 1) {
     let returnObj = new Object();
@@ -23,7 +22,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
     returnObj.foodName = bodyName + "에 대한 정보가 없어요";
     returnObj.isFind = isFind;
     returnAction1.push(returnObj);
-    console.log(returnAction1);
     return returnAction1;
   }
   else {
@@ -65,7 +63,6 @@ exports.searchAction1 = function (bodyName, startIdx) {
       if (j == 3) break;
     }
     for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-    console.log(returnAction1);
     return returnAction1;
   }
 }
@@ -93,7 +90,6 @@ exports.searchAction4 = function (foodName, startIdx) {
     returnObj.index = 1;
     returnObj.isFind = isFind;
     returnAction4.push(returnObj);
-    console.log(returnAction4);
     return returnAction4;
   }
   else {
@@ -136,10 +132,10 @@ exports.searchAction4 = function (foodName, startIdx) {
       if (j == 3) break;
     }
     for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
-    console.log(returnAction4);
     return returnAction4;
   }
 }
+// 추후 데이터베이스 업데이트 이후 사용할 함수
 exports.searchAction1_harmful = function (bodyName, startIdx) {
   const console = require('console');
   const config = require('config');
@@ -162,9 +158,7 @@ exports.searchAction1_harmful = function (bodyName, startIdx) {
     returnObj.bodyName = bodyName;
     returnObj.foodName = bodyName + "에 대한 정보가 없어요";
     returnObj.isFind = isFind;
-    console.log("isFind == " + returnObj.isFind);
     returnAction1.push(returnObj);
-    console.log(returnAction1);
     return returnAction1;
   }
   else {
@@ -187,11 +181,11 @@ exports.searchAction1_harmful = function (bodyName, startIdx) {
       if (j == 3) break;
     }
     for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
-    console.log(returnAction1);
     return returnAction1;
 
   }
 }
+// 추후 데이터베이스 업데이트 이후 사용할 함수
 exports.searchAction4_harmful = function (foodName, startIdx) {
   const console = require('console');
   const config = require('config');
@@ -215,7 +209,6 @@ exports.searchAction4_harmful = function (foodName, startIdx) {
     returnObj.index = 1;
     returnObj.isFind = isFind;
     returnAction4.push(returnObj);
-    console.log(returnAction4);
     return returnAction4;
   }
   else {
@@ -237,7 +230,6 @@ exports.searchAction4_harmful = function (foodName, startIdx) {
       if (j == 3) break;
     }
     for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
-    console.log(returnAction4);
     return returnAction4;
   }
 }
