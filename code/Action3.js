@@ -64,8 +64,8 @@ module.exports.function = function action3(foodName, bodyName, request) {
         bodyName: bodyName
       }
     };
-    let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
-    if (harmfulResponse.length < 1) {
+    // let harmfulResponse = http.getUrl(config.get('remote.url') + '/harmful', harmfulOptions);
+    // if (harmfulResponse.length < 1) {
       infoJudge = false;
       let returnAction1 = new Object();
       let returnAction4 = new Object();
@@ -84,7 +84,8 @@ module.exports.function = function action3(foodName, bodyName, request) {
       //returnAction3.mainImage = data[checkIdx].mainImage;
       returnAction3.answer = foodName + "과 " + bodyName + "관련 정보를 찾아봤어요.";
       return returnAction3;
-    } else {
+    } 
+    // else {
       // infoJudge = true;
       // returnAction3.infoJudge = infoJudge;
       // // 문구 수정필요
@@ -92,6 +93,6 @@ module.exports.function = function action3(foodName, bodyName, request) {
       // returnAction3.mainImage = harmfulResponse[0].mainImage;
       // returnAction3.foodDescription = String(harmfulResponse[0].foodDescription);
       // return returnAction3;
-    }
-  }
+    // }
+  // }
 }

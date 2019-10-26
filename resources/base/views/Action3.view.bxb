@@ -72,6 +72,15 @@ result-view{
             }
 
             if(size(this.returnAction1)>0||size(this.returnAction4)>0){
+              title-area{
+                halign (Center)
+                slot1{
+                  text{
+                    style(Detail_M)
+                    value(" ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶ ̶")
+                  }
+                }
+              }
               paragraph{
                 style(Detail_M)
                 value("이것 말고도 제가 알고 있는 이런 정보는 어때요?")
