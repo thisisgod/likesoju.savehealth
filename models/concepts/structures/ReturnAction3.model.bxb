@@ -32,10 +32,6 @@ structure (ReturnAction3) {
     type(ReturnAction1)
     min (Optional) max (Many)
   }
-  property (returnAction2){
-    type(ReturnAction2)
-    min (Optional) max (Many)
-  }
   property (mainImage){
     type (MainImage)
     min (Optional) max (One)

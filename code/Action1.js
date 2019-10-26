@@ -1,9 +1,9 @@
 module.exports.function = function action1(bodyName, startIdx, request) {
-  let returnAction1 = new Object(); 
+  let returnAction1 = new Object();
   const search = require('./lib/SearchAction.js');
-  if(request == "Good"){
+  if (request == "Good") {
     returnAction1 = search.searchAction1(bodyName, startIdx);
-  }else{
+  } else {
     returnAction1 = search.searchAction1_harmful(bodyName, startIdx);
   }
   return returnAction1;
