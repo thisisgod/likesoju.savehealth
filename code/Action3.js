@@ -55,6 +55,7 @@ module.exports.function = function action3(foodName, bodyName, request) {
     returnAction3.recipe = recipeArr;
     return returnAction3;
   }
+  // harmful에 대한 데이터베이스가 추가되면 추후에 추가할 기능
   else {
     let harmfulOptions = {
       format: 'json',
@@ -84,14 +85,13 @@ module.exports.function = function action3(foodName, bodyName, request) {
       returnAction3.answer = foodName + "과 " + bodyName + "관련 정보를 찾아봤어요.";
       return returnAction3;
     } else {
-      infoJudge = true;
-      returnAction3.infoJudge = infoJudge;
-      // 문구 수정필요
-      returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
-      returnAction3.mainImage = harmfulResponse[0].mainImage;
-      returnAction3.foodDescription = String(harmfulResponse[0].foodDescription);
-      return returnAction3;
-
+      // infoJudge = true;
+      // returnAction3.infoJudge = infoJudge;
+      // // 문구 수정필요
+      // returnAction3.answer = foodName + "은 " + bodyName + "에 좋지않아요";
+      // returnAction3.mainImage = harmfulResponse[0].mainImage;
+      // returnAction3.foodDescription = String(harmfulResponse[0].foodDescription);
+      // return returnAction3;
     }
   }
 }
