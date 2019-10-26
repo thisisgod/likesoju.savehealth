@@ -30,7 +30,7 @@ structure (ReturnAction1) {
   }
   property (index){
     type(Index)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
   property (mainImage){
     type (MainImage)

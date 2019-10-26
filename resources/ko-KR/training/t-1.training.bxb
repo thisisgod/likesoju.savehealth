@@ -8,13 +8,3 @@ train (t-11uhapi1h91o7j4mc401dnjsl) {
   plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
   last-modified (1571919705785)
 }
-train (t-1djmtxs3ksd8jq4bn6s0ouv35) {
-  utterance ("[g:ReturnAction4] (바나나)[v:FoodName]가 어디에 (좋아)[v:Request:Good]")
-  plan (Y2BhUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2GQxqYEJimDTdItPz/FLzE3FbvWoNTC0tTiEgZmBkYGJiDJAKRBEAJAfLAoAA==)
-  last-modified (1572118212045)
-}
-train (t-1ymdn24iv0uxkquzk4um6y8ed) {
-  utterance ("[g:ReturnAction3] (바나나)[v:FoodName]가 (위)[v:BodyName]에 (좋아)[v:Request:Good]")
-  plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSUMLAyMDEwMzECaAciCQBgAiUHlAA==)
-  last-modified (1572118329121)
-}

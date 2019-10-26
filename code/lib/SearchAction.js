@@ -59,10 +59,8 @@ exports.searchAction1 = function (bodyName, startIdx) {
       returnAction1.push(returnObj);
       delete returnObj;
       delete recipeArr
-      j++;
-      if (j == 3) break;
     }
-    for (i = 0; i < j; i++)returnAction1[i].index = startIdx + j;
+    console.log(returnAction1);
     return returnAction1;
   }
 }
@@ -128,10 +126,8 @@ exports.searchAction4 = function (foodName, startIdx) {
       returnAction4.push(returnObj);
       delete returnObj;
       delete recipeArr
-      j++;
-      if (j == 3) break;
     }
-    for (i = 0; i < j; i++)returnAction4[i].index = startIdx + j;
+    console.log(returnAction4);
     return returnAction4;
   }
 }
