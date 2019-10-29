@@ -1,0 +1,5 @@
+train (t-djwg8dkbe3nl348anludktx97) {
+  utterance ("[g:RecipeAction] (돼지고기)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572385088130)
+}

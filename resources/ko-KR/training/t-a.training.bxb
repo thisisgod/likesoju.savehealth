@@ -1,0 +1,10 @@
+train (t-a15fdwblei265i6zr8t3e1cyi) {
+  utterance ("[g:RecipeAction] (고추)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572383516494)
+}
+train (t-ahiov5wgudtzy1qss1rnsa4mm) {
+  utterance ("[g:RecipeAction] (문어)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572385306021)
+}

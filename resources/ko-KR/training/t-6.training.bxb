@@ -13,6 +13,11 @@ train (t-6ihomq7lhhx6usqmcqss2a7ai) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571919160582)
 }
+train (t-6ijgco5tkilc8ty0vz7yp5wuj) {
+  utterance ("[g:RecipeAction] (호두)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572384962925)
+}
 train (t-6u04u2nsqs7clnl27pl5ehnuv) {
   utterance ("[g:ReturnAction1] (변비)[v:BodyName]에는 어떤 음식이 (좋은지)[v:Request:Good] 알려줘")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)

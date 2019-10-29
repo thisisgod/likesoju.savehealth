@@ -13,3 +13,8 @@ train (t-jf3ii6j9ktha1cuww826i8sdf) {
   plan (Y2BlUMzJzE4tzs8q1StOLEvNSE3MKcnQC0otKS3Kc0wuyczPM2aQxqYEJimDTdIpP6XSLzE3FbusW35+ClhWGrvdhaWpxSUMLAyMDEwMzECaAciCQBgAiUHlAA==)
   last-modified (1571673288784)
 }
+train (t-jjj0aiq9pzz7rm80n5ty9hwx9) {
+  utterance ("[g:RecipeAction] (호박)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572385082961)
+}

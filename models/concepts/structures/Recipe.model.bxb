@@ -1,5 +1,9 @@
 structure (Recipe) {
   description (레시피 정보를 저장할 구조체)
+  property (foodName) {
+    type (FoodName)
+    min (Required) max (Many)
+  }
   property (recipeName) {
     type (RecipeName)
     min (Required) max (Many)

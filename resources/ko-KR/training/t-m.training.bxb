@@ -8,6 +8,11 @@ train (t-m3x093gcutgqb7d5ozmafmnlz) {
   plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
   last-modified (1571919456099)
 }
+train (t-m8d19q3c97cng0c54gd3ah713) {
+  utterance ("[g:RecipeAction] (고등어)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572385252629)
+}
 train (t-mqu9uji9hlqt77lm0o99h5rbl) {
   utterance ("[g:ReturnAction1] (눈)[v:BodyName]에는 뭐가 (좋아)[v:Request:Good]")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNkkMGqBiYri1XWKT+l0i8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)

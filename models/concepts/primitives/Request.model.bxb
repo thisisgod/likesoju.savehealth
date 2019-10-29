@@ -2,4 +2,5 @@ enum (Request) {
   description (요구하는 것을 판단하는 Enum)
   symbol (Good)
   symbol (Harmful)
+  symbol (recipe)
 }

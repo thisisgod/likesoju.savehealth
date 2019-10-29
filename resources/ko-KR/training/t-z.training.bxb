@@ -3,3 +3,13 @@ train (t-zaehl2x3297lmbu9fvi1izf7j) {
   plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)
   last-modified (1571470654505)
 }
+train (t-zj4zmrl2p9g5lnrjxp7d9pm4d) {
+  utterance ("[g:RecipeAction] (인삼)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572385300862)
+}
+train (t-zzgusekmi226x9s5ij8ub3lsz) {
+  utterance ("[g:RecipeAction] (아몬드)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572384897314)
+}

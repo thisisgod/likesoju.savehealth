@@ -1,3 +1,8 @@
+train (t-kcbt27j8itco84a28ofj6acvi) {
+  utterance ("[g:RecipeAction] (사과)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572384899050)
+}
 train (t-ktuklucrpdx1qxx0ctrdktv85) {
   utterance ("[g:ReturnAction3] (피부)[v:BodyName]에 (인삼)[v:FoodName]이 (좋은지)[v:Request:Good] 아니")
   plan (Y2BlUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNmkMGqBiYri1XWKT+l0i8xNxWHtFt+fgpYWgaH/YWlQC4DCwMjAxMDM5BmALIgEAZAYlA5AA==)

@@ -3,6 +3,11 @@ train (t-5n99tenyrlr9mtv5ob1pa233g) {
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)
   last-modified (1571919994634)
 }
+train (t-5o4wwcuapqp6kceoyvvgf6vtw) {
+  utterance ("[g:RecipeAction] (소고기)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
+  plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1572385206566)
+}
 train (t-5snk1b3rl27dp5mymm23c9pf2) {
   utterance ("[g:ReturnAction4] (당근)[v:FoodName]은 어디에 (좋을까)[v:Request:Good]")
   plan (Y2BhUMrJzE4tzs8q1StJLS5JTiwoLs1J1QtKLSktynNMLsnMzzNhkMGqBiYri1XWLT8/xS8xNxWH5qDUwlIgl4GZgZGBCUgyAGkQhAAQHywKAA==)

@@ -12,5 +12,9 @@ endpoints {
       accepted-inputs (foodName, startIdx, request)
       local-endpoint (Action4.js)
     }
+    action-endpoint (RecipeAction) {
+      accepted-inputs (foodName, request)
+      local-endpoint (recipeAction.js)
+    }
   }
 }
