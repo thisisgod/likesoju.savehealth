@@ -1,4 +1,4 @@
-layout-macro-def (list-body-about-food) { //액션4에 대한 결과
+layout-macro-def (list-body-about-food) { //현재 사용X
   params {
     param (returnAction4) {
       type (ReturnAction4)
