@@ -1,4 +1,4 @@
-layout-macro-def (list-recipe){ //액션1에서 선택시 사용됨
+layout-macro-def (list-recipe){ //레시피 요청시 사용
   params {
     param (recipe) {
       type (Recipe)
