@@ -8,9 +8,6 @@ result-view{
     //if(this.isFind&&this.infoJudge){
       template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 좋은 음식입니다.")
     //}
-    // else-if(!this.isFind&&this.infoJudge){
-    //   template ("#{value(this.foodName)}은(는) #{value(this.bodyName)}에 나쁜 음식입니다.")
-    // }
     }
     else{
       template ("#{value(this.foodName)}와(과) #{value(this.bodyName)}에 대해 찾아봤습니다.")
@@ -90,6 +87,7 @@ result-view{
                 value(" ")
               }
             }
+
             if(this.returnAction1[0].isFind){
               //if(this.returnAction1[0].harmful){
                 title-area{
@@ -101,17 +99,6 @@ result-view{
                     }
                   }
                 }
-              // }
-              // else{
-              //   title-area{
-              //     halign (End)
-              //     slot1{
-              //       text{
-              //         value("#{value(this.bodyName)}에 나쁜 음식")
-              //         style(Detail_L_Soft)
-              //       }
-              //     }
-              //   }
               // }
               for-each (this.returnAction1){
                 as (item){
@@ -141,6 +128,11 @@ result-view{
               }
             }
 
+            paragraph{
+              value(" ")
+              style(Detail_L)
+            }
+
 
             if(this.returnAction4[0].isFind){
               //if(this.returnAction4[0].harmful){
@@ -154,24 +146,16 @@ result-view{
                   }
                 }
               //}
-              // else{
-              //   title-area{
-              //     halign (End)
-              //     slot1{
-              //       text{
-              //         value("#{value(this.foodName)}의 부작용")
-              //         style(Detail_L_Soft)
-              //       }
-              //     }
-              //   }
-              // }
               
               for-each (this.returnAction4){
                 as (item){
-                  single-line{
-                    text{
-                      value("#{value(item.bodyName)}")
-                      style(Title_S)
+                  title-area{
+                    halign (Start)
+                    slot1{
+                      text{
+                        value("#{value(item.bodyName)}")
+                        style(Title_S)
+                      }
                     }
                   }
                   paragraph{
@@ -188,23 +172,13 @@ result-view{
   }
 
   conversation-drivers{
-    conversation-driver{
-      if(this.isFind){
+    if (this.isFind){
+      conversation-driver{
         template ("#{value(this.foodName)}이(가) 좋은 다른 부위 알려줘")
       }
-      // else-if (!this.isFind&&this.infoJudge){
-      //   template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
-      //   template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
-      // }
-    }
-    conversation-driver{
-      if(this.isFind){
+      conversation-driver{
         template ("#{value(this.bodyName)}에 다른 좋은 음식 알려줘")
       }
-      // else-if (!this.isFind&&this.infoJudge){
-      //   template ("#{value(this.foodName)}이(가) 어디에 안좋아?")
-      //   template ("#{value(this.bodyName)}에 안좋은 음식이 뭐야?")
-      // }
     }
   }
 }
