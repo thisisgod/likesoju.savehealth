@@ -1,0 +1,47 @@
+result-view{
+  match : Recipe(this){
+    from-output:RecipeAction
+  }
+
+  message{  //다이얼
+    template ("#{value(this.foodName)} 레시피를 찾아봤어요.")
+  }
+
+  render{   //레이아웃
+    if(size(this)>0){
+      layout{
+        section{
+          content{
+            title-area{
+              halign (End)
+              slot1{
+                text{
+                  value("#{value(this[0].foodName)} 레시피")
+                  style(Title_S)
+                }
+              }
+            }
+            for-each (this){
+              as (item){
+                layout-macro (list-recipe){
+                  param (recipe){
+                    expression (item)
+                  }
+                }
+                attribution-link{
+                  label{
+                    template ("#{value(item.recipeName)} 레시피 보기")
+                  }
+                  url("#{value(item.recipeURL)}")
+                }
+              }
+            }
+
+          }
+        }
+      }
+      
+    }
+  }
+  
+}
