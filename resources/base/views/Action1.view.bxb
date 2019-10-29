@@ -6,12 +6,12 @@ result-view{
   message{  //다이얼
     //if(size(this)>0){
       if(this.isFind){
-        //if(!this.harmful){
-          template ("#{value(this.bodyName)}에 좋은 음식입니다.")
-        //}
-        //else{
-        //  template ("#{value(this.bodyName)}에 나쁜 음식입니다.")
-        //}
+        if(size(this)>1){
+          template ("#{value(this.bodyName)}에 좋은 음식들입니다.")
+        }
+        else{
+          template ("#{value(this.bodyName)}에 좋은 음식은 #{value(this.foodName)}입니다.")
+        }
       }
       else{
         template ("#{value(this.bodyName)}에 대한 정보가 없어요.")
@@ -62,16 +62,11 @@ result-view{
     }
   }
 
-  // conversation-drivers{ //hint
-  //   conversation-driver{
-  //     if(this.isFind){
-  //       if(!this.harmful){
-  //         template ("#{value(this.bodyName)}에 나쁜 음식이 뭐야?")
-  //       }
-  //       else{
-  //         template ("#{value(this.bodyName)}에 좋은 음식이 뭐야?")
-  //       }
-  //     }
-  //   }
-  // }
+  conversation-drivers{ //hint
+    conversation-driver{
+      if(this.isFind&&size(this)==1){
+        template ("#{value(this.foodName)} 레시피 알려줘")
+      }
+    }
+  }
 }
