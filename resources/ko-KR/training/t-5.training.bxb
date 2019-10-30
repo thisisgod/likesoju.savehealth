@@ -6,7 +6,7 @@ train (t-5n99tenyrlr9mtv5ob1pa233g) {
 train (t-5o4wwcuapqp6kceoyvvgf6vtw) {
   utterance ("[g:RecipeAction] (소고기)[v:FoodName] (레시피)[v:Request:recipe] 알려줘")
   plan (Y2BhkMrJzE4tzs8q1StOLEvNSE3MKcnQC0pNzixIZVDALeeYXJKZn8cgg02FW35+il9ibiqDNHb9haWpxSUMzAyMDExAkgFIgyAEwEUB)
-  last-modified (1572385206566)
+  last-modified (1572418029272)
 }
 train (t-5snk1b3rl27dp5mymm23c9pf2) {
   utterance ("[g:ReturnAction4] (당근)[v:FoodName]은 어디에 (좋을까)[v:Request:Good]")
